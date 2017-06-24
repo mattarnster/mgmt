@@ -25,7 +25,10 @@ class Projects extends PureComponent {
       title: 'Add New Project',
       input: 'text',
       showCancelButton: true,
-      confirmButtonText: 'Submit',
+      confirmButtonText: '',
+      confirmButtonColor: '#ffffff',
+      cancelButtonText: '',
+      cancelButtonColor: '#ffffff',
       showLoaderOnConfirm: true,
       preConfirm: function (name) {
         return new Promise(function (resolve, reject) {
