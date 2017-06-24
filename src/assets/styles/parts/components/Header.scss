@@ -1,7 +1,40 @@
-header {
+header.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px;
-  background-color: rgba(#000,0.18);
+  color: $white;
+  span.icon-clock {
+    font-size: 25px;
+  }
+  span.logo-letter {
+    font-size: 25px;
+    margin-left: 10px;
+    position: relative;
+    top: -1px;
+    font-weight: 100;
+    opacity: 0;
+    left: 10px;
+    transition: 0.5s all ease;
+  }
+  span.logo-letter.one {
+    transition: 0.5s all ease;
+  }
+  span.logo-letter.two {
+    transition: 0.5s 0.1s all ease;
+  }
+  span.logo-letter.three {
+    transition: 0.5s 0.2s all ease;
+  }
+  span.logo-letter.four {
+    transition: 0.5s 0.3s all ease;
+  }
+
+  .logo-container:hover {
+    span.logo-letter {
+      opacity: 1;
+      left: 0px;
+    }
+
+  }
 }

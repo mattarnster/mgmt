@@ -9,6 +9,34 @@
 	],
 "creatorBuild": "25479",
 "files": {
+	"\/fonts\/icomoon.eot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/icomoon.eot",
+		"oF": 0
+		},
+	"\/fonts\/icomoon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/fonts\/icomoon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/fonts\/icomoon.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/icomoon.ttf",
+		"oF": 0
+		},
+	"\/fonts\/icomoon.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/icomoon.woff",
+		"oF": 0
+		},
 	"\/styles\/main.css": {
 		"aP": 0,
 		"bl": 0,
