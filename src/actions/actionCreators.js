@@ -7,29 +7,13 @@ export function addClient(clientName) {
   }
 }
 
-export function addProjectInternal(projectName, projectId) {
+export function addProject(projectName, clientId) {
   return {
     type: "ADD_PROJECT",
     payload: {
       projectName,
-      projectId
+      clientId
     }
   }
 }
 
-export function addProjectToClient(project, clientId) {
-  return {
-    type: "ADD_PROJECT_TO_CLIENT",
-    payload: {
-      clientId,
-      project
-    }
-  }
-}
-
-export function addProject(projectName, projectId, clientId) {
-  return (dispatch) => {
-    let actionResult = dispatch(addProjectInternal(projectName, projectId))
-    dispatch(addProjectToClient(actionResult.payload, clientId))
-  }
-}

@@ -2,8 +2,12 @@ import React, { PureComponent } from 'react'
 import List from './List'
 
 import { connect } from 'react-redux'
+import { ProjectFilter } from '../selectors/ProjectFilter'
 
 import { addProject } from '../actions/actionCreators'
+
+
+
 
 class Projects extends PureComponent {
 
@@ -13,9 +17,6 @@ class Projects extends PureComponent {
     this.addProject = this.addProject.bind(this)
   }
 
-  shouldComponentUpdate() {
-    return true
-  }
 
   addProject() {
     var that = this;
@@ -38,9 +39,8 @@ class Projects extends PureComponent {
       },
       allowOutsideClick: false
     }).then(function (name) {
-      let id = Date.now()
       let clientId = that.props.match.params.clientId
-      that.props.dispatch(addProject(name, id, clientId))
+      that.props.dispatch(addProject(name, clientId))
     })
   }
 
@@ -62,8 +62,10 @@ class Projects extends PureComponent {
 }
 const mapStateToProps = (state,props) => {
   return {
-    projects: state.clients[props.match.params.clientId].projects
+    projects: ProjectFilter(state,props)
   }
 }
 
 export default connect(mapStateToProps)(Projects)
+
+//props.match.params.clientId
