@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react'
+import List from './List'
+
 
 export default class Projects extends PureComponent {
   render() {
