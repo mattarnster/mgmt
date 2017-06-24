@@ -1,14 +1,8 @@
-header.header + div {
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  height:calc(100% - 80px);
-}
 header.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: 0 25px;
   color: $white;
   height: 80px;
   width: 100%;
@@ -20,9 +14,11 @@ header.header {
   span.icon-cog {
     font-size: 25px;
   }
+
   .settings-container {
-    transition: 0.3s all ease;
+    transition: .3s all ease;
   }
+
   .settings-container:hover {
     transform: rotate(90deg);
   }
@@ -35,25 +31,30 @@ header.header {
     font-weight: 100;
     opacity: 0;
     left: 10px;
-    transition: 0.3s all ease;
+    transition: .3s all ease;
     pointer-events: none;
   }
+
   span.logo-letter.one {
-    transition: 0.3s all ease;
+    transition: .3s all ease;
   }
+
   span.logo-letter.two {
-    transition: 0.3s 0.1s all ease;
+    transition: .3s .1s all ease;
   }
+
   span.logo-letter.three {
-    transition: 0.3s 0.2s all ease;
+    transition: .3s .2s all ease;
   }
+
   span.logo-letter.four {
-    transition: 0.3s 0.3s all ease;
+    transition: .3s .3s all ease;
   }
+
   .logo-container:hover {
     span.logo-letter {
       opacity: 1;
-      left: 0px;
+      left: 0;
     }
   }
 
@@ -66,10 +67,12 @@ header.header {
       font-weight: 100;
       position: relative;
       top: -3px;
+
       &::placeholder {
         color: $white;
       }
     }
+
     button {
       font-size: 25px;
       background-color: transparent;

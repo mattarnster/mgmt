@@ -1,107 +1,127 @@
 .main-panel {
+  height: calc(100vh - 210px);
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  min-height: 500px;
+  margin-bottom: 24px;
 }
+
 .card {
   width: 500px;
   max-width: 90%;
-  height:500px;
-  padding: 50px;
+  height: 500px;
   border-radius: 5px;
   background-color: var(--card);
   box-shadow: 3px 3px 20px -3px rgba(0,0,0,0.25);
-  header {
+  padding: 50px;
+}
+
+.card header {
+  font-size: 26.52px;
+  font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+
+  button {
+    background-color: transparent;
+    border: none;
     font-size: 26.52px;
-    font-weight: 100;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 25px;
-    border-bottom: 1px solid var(--border);
-    button {
-      background-color: transparent;
-      border: none;
-      font-size: 26.52px;
-      position: relative;
-      top: -3px;
-      cursor: pointer;
-      transition: 0.3s all ease;
-      color: #9f9d9f;
-      padding: 0 !important;
-    }
-    button:hover {
-      transform: rotate(90deg);
-      color: $black;
-    }
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    transition: .3s all ease;
+    color: #9f9d9f;
+    padding: 0 !important;
   }
-  .card-body {
-    height: 100%;
+
+  button:hover {
+    transform: rotate(90deg);
+    color: $black;
   }
-  nav.card-list {
-    height: 93%;
-    overflow-y: scroll;
-  }
-  .card-list-item {
+}
+
+.card .card-body {
+  padding: 25px 0 0;
+}
+
+.card .card-list .card-list-item > div {
+  padding: 25px 0;
+}
+
+.card .card-list .card-list-item {
+  font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+
+  a {
+    color: var(--text);
+    position: relative;
+    top: 2px;
+    opacity: .5;
+    transition: .3s all ease;
+    width: 100%;
     padding: 25px 0;
-    font-weight: 100;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--border);
-    a {
-      color: var(--text);
-      position: relative;
-      top: 2px;
-      opacity: 0.5;
-      transition: 0.3s all ease;
-      &:hover {
-        opacity: 1;
-      }
-    }
-    button {
-      background-color: transparent;
-      border: none;
-      font-size: 15px;
-      color: var(--text);
-      opacity: 0.5;
-      transition: 0.3s all ease;
-      cursor: pointer;
-      &:hover {
-        opacity: 1;
-      }
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
     }
   }
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    color: var(--text);
+    opacity: .5;
+    transition: .3s all ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
 }
 
 section.card:last-child:not(:first-child) {
   transform: translateX(-50%);
 }
+
 section.card:nth-last-child(2) {
   transform: translateX(-60%) scale(0.9);
-  transition: 0.3s all ease;
-  opacity: 0.8;
+  transition: .3s all ease;
+  opacity: .8;
+
   * {
     pointer-events: none;
   }
 }
+
 section.card:nth-last-child(2):hover {
   transform: translateX(-60%) scale(0.91);
   opacity: 1;
 }
+
 section.card:nth-last-child(3) {
   transform: translateX(-120%);
   display: none;
 }
+
 section.card:nth-last-child(4) {
   transform: translateX(-120%);
   display: none;
 }
-
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 880px) {
   section.card:nth-last-child(2) {
     transform: translateX(0);
     display: none;
   }
+
   section.card:last-child:not(:first-child) {
     transform: translateX(0);
   }

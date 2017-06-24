@@ -3,21 +3,26 @@
     font-size: 14px;
     margin-left: 15px;
   }
+
   header button.active {
     color: var(--text);
     opacity: 1;
   }
+
   header button:before {
     content: '•';
     margin-right: 5px;
     opacity: 0;
   }
+
   header button.active:before {
     content: '•';
     margin-right: 5px;
     opacity: 1;
   }
+
   header button:hover {
     transform: none;
   }
+
 }
