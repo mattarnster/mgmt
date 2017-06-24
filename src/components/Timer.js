@@ -54,6 +54,8 @@ class Timer extends Component {
     let ticking = this.state.ticking
     clearInterval(ticking)
 
+
+
     // fix issue with inctive tabs being throttled
     let startTime = this.state.startTime;
     let endTime = Date.now();
@@ -68,8 +70,11 @@ class Timer extends Component {
       time: finalTime
     })
 
+
     this.props.dispatch(addTimeToProject(this.props.match.params.projectId, finalTime))
     this.props.dispatch(processLog(finalTime, this.props.match.params.projectId))
+
+
   }
 
 
