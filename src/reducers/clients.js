@@ -4,6 +4,11 @@ const clients = (state = {}, action) => {
     case 'ADD_CLIENT':
       console.log(state)
       console.log(action)
+      let newClient = {
+        name: action.payload.clientName
+      }
+      let id = new Date('now')
+      Object.assign({}, state, { [id]: newClient })
       return state
 
     default:
