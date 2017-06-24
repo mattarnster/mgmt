@@ -2,17 +2,11 @@
   "1498275313738": {
     "clientId":"1498275313738",
     "name": "Website",
-    "totalTime":0,
-    "logs": [
-      "1498275313750"
-    ]
+    "totalTime":0
   },
   "1498275313740": {
     "clientId":"1498275313734",
     "name": "Website 2",
-    "totalTime":100,
-    "logs":[
-      "1498275313751"
-    ]
+    "totalTime":100
   }
 }

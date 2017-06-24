@@ -17,3 +17,13 @@ export function addProject(projectName, clientId) {
   }
 }
 
+export function addTimeToProject(projectId, totalTime) {
+  return {
+    type: "ADD_TIME_TO_PROJECT",
+    payload: {
+      projectId,
+      totalTime
+    }
+  }
+}
+
