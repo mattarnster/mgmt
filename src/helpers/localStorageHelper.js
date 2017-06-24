@@ -11,9 +11,11 @@ export default class localStorageHelper {
 
     init() {
       if (window.localStorage.getItem('clients') === null) {
+        console.log('got here 1')
         window.localStorage.setItem('clients', JSON.stringify(clientData))
       }
       if (window.localStorage.getItem('projects') === null) {
+        console.log('got here 2')
         window.localStorage.setItem('projects', JSON.stringify(projectData))
       }
     }
@@ -26,7 +28,11 @@ export default class localStorageHelper {
       let clients = JSON.parse(window.localStorage.getItem('clients'))
       return clients
     }
-    putClient() {}
+    putClients(clients) {
+      let newClients = JSON.stringify(clients)
+      window.localStorage.setItem('clients', newClients)
+    }
+
     deleteClient() {}
 
     /**
