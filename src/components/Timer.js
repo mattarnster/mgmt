@@ -77,7 +77,7 @@ class Timer extends Component {
     return (
       <section className="card timer">
         <header>
-          <h1>Current Session</h1>
+          <h1>{this.props.projects[this.props.match.params.projectId].name}</h1>
           <Link to={ "/" + this.props.match.params.clientId + "/" + this.props.match.params.projectId + "/logs"}>View Log<i className="icon-clipboard"></i></Link>
         </header>
         <div className="card-body">

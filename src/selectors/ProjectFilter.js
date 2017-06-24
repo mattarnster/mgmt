@@ -16,7 +16,7 @@ export const ProjectFilter = createSelector(
         ));
 
       case "key":
-        return {[clientId]:{totalTime:projects[clientId].totalTime}}
+        return {[clientId]:{totalTime:projects[clientId].totalTime,name:projects[clientId].name}}
 
       default:
       return null
