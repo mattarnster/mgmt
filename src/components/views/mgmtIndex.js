@@ -9,17 +9,17 @@ import Projects from '../Projects'
 import Settings from '../Settings'
 import Timer from '../Timer'
 
-export default class mgmtIndex extends PureComponent {
+export default class MgmtIndex extends PureComponent {
   render() {
     return (
       <div>
         <Header />
           <Router>
             <div>
-              <Route path={ this.props.match.url} component={Clients} />
-              <Route path={ this.props.match.url + ':clientId' } component={Projects} />
-              <Route path={ this.props.match.url + ':clientId/:projectId' } component={Timer} />
-              <Route path={ this.props.match.url + ':clientId/:projectId/logs' } component={Logs} />
+              <Route path="/" component={Clients} />
+              <Route path="/:clientId"  component={Projects} />
+              <Route path="/:clientId/:projectId"  component={Timer} />
+              <Route path="/:clientId/:projectId/logs"  component={Logs} />
             </div>
           </Router>
           <Settings />

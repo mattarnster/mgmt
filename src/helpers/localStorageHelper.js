@@ -42,7 +42,10 @@ export default class localStorageHelper {
       let projects = JSON.parse(window.localStorage.getItem('projects'))
       return projects
     }
-    putProject() {}
+    putProjects(projects) {
+      let newProjects = JSON.stringify(projects)
+      window.localStorage.setItem('projects', newProjects)
+    }
     deleteProject() {}
 
     /**
