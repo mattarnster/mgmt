@@ -11,6 +11,10 @@ body.dark {
   --text: #222222;
   --border: rgba(#222,0.15);
 }
+
+
+
+
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot?6ba3o4');
@@ -37,6 +41,12 @@ body.dark {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pause-circle:before {
+  content: "\e905";
+}
+.icon-play-circle:before {
+  content: "\e906";
+}
 .icon-times-circle:before {
   content: "\e90e";
 }
@@ -49,6 +59,9 @@ body.dark {
 .icon-check-circle2:before {
   content: "\e901";
 }
+.icon-check-square:before {
+  content: "\e910";
+}
 .icon-check:before {
   content: "\e90c";
 }
@@ -60,12 +73,6 @@ body.dark {
 }
 .icon-folder:before {
   content: "\e904";
-}
-.icon-pause:before {
-  content: "\e905";
-}
-.icon-play:before {
-  content: "\e906";
 }
 .icon-plus:before {
   content: "\e907";

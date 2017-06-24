@@ -82,7 +82,7 @@ class Timer extends Component {
         </header>
         <div className="card-body">
           <h1 className="timer">{this.getTimer()}</h1>
-          <button onClick={!this.state.ticking ? this.play : this.pause} className={!this.state.ticking ? 'icon-play' : 'icon-pause'}></button>
+          <button onClick={!this.state.ticking ? this.play : this.pause} className={!this.state.ticking ? 'icon-play-circle' : 'icon-pause-circle'}></button>
         </div>
       </section>
     )
