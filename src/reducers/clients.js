@@ -4,7 +4,7 @@ const clients = (state = {}, action) => {
     case 'ADD_CLIENT':
       console.log(state)
       console.log(action)
-      break;
+      return state
 
     default:
       return state
