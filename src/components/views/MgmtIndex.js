@@ -22,7 +22,7 @@ export default class MgmtIndex extends PureComponent {
               <Route path="/:clientId/:projectId/logs"  component={Logs} />
             </div>
           </Router>
-          <Settings />
+
         <Footer />
       </div>
     )
