@@ -17,7 +17,7 @@ const getName = (logId,duration) =>{
       var  day = date.getDay(),
       diff = date.getDate() - day + (day === 0 ? -6:1),
       diffo = date.getDate() - day + (day === 6 ? 6:0)
-      return new Date(date.setDate(diff)).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+"  --  "+ new Date(date.setDate(diffo)).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+" "+date.getFullYear()
+      return new Date(date.setDate(diff)).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+"  –  "+ new Date(date.setDate(diffo)).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+" "+date.getFullYear()
 
     default:
       return date.toLocaleDateString('en-GB',{ year: 'numeric', month: 'long'})
