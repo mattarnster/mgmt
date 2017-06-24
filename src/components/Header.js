@@ -1,8 +1,24 @@
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
 
-export default class Header extends PureComponent {
+import { saveSettings } from '../actions/actionCreators'
+
+class Header extends PureComponent {
+
+  constructor() {
+    super()
+
+    this.showSettingsModal = this.showSettingsModal.bind(this)
+  }
+
+  componentDidMount() {
+    if (this.props.settings[0] === 'on') {
+      document.body.className += ' ' + 'dark-mode'
+    }
+  }
 
   showSettingsModal() {
+    var that = this
     window.swal({
       title: 'Settings',
       html:
@@ -18,6 +34,9 @@ export default class Header extends PureComponent {
       preConfirm: function () {
         return new Promise(function (resolve, reject) {
           // Do validation here
+          if (document.getElementById('alerts').value === 'on' && document.getElementById('alert_periods').value === '') {
+            reject("You need to specify an alert period.")
+          }
           resolve([
             document.getElementById('dark_mode').value,
             document.getElementById('alerts').value,
@@ -28,7 +47,8 @@ export default class Header extends PureComponent {
       },
       allowOutsideClick: false
     }).then(function (result) {
-      window.swal(JSON.stringify(result))
+      //window.swal(JSON.stringify(result))
+      that.props.dispatch(saveSettings(result))
     }).catch(window.swal.noop)
   }
 
@@ -49,3 +69,11 @@ export default class Header extends PureComponent {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    settings: state.settings
+  }
+}
+
+export default connect(mapStateToProps)(Header)

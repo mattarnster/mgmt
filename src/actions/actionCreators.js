@@ -55,3 +55,12 @@ export function changeLogFilterDuration(duration) {
   }
 }
 
+export function saveSettings(settings) {
+  return {
+    type: "SAVE_SETTINGS",
+    payload: {
+      settings
+    }
+  }
+}
+

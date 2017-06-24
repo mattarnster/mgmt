@@ -16,7 +16,7 @@ const defaultState = {
     clients: localStorage.getClients(),
     logs: localStorage.getLogs(),
     logFilterDuration: 'Day',
-    settings: []
+    settings: ['on']
 }
 
 const store = createStore(
