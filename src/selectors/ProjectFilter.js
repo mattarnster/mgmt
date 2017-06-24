@@ -8,14 +8,10 @@ export const ProjectFilter = createSelector(
   [ getVisibilityFilter, getProjects ],
   (visibilityFilter, projects) => {
 
-    var reProjects = Object.keys(projects).filter(s => projects[s].clientId === visibilityFilter)
-    var ret = {};
-    reProjects.forEach(function(k,i){
-      ret[k] = {
-        name: projects[k].name
-      }
-    });
+    let reProjects = Object.assign({}, ...Object.keys(projects).map(k => (
+      (projects[k].clientId === visibilityFilter ? {[k]: {name:projects[k].name}} : null))
+    ));
 
-    return ret
+    return reProjects
   }
 )
