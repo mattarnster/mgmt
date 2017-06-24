@@ -75,13 +75,14 @@ class Timer extends Component {
 
   render() {
     return (
-      <section className="card">
+      <section className="card timer">
         <header>
-          <h1>{this.getTimer()}</h1>
+          <h1>Current Session</h1>
+          <Link to={ "/" + this.props.match.params.clientId + "/" + this.props.match.params.projectId + "/logs"}>View Log<i className="icon-clipboard"></i></Link>
         </header>
         <div className="card-body">
-          <button onClick={!this.state.ticking ? this.play : this.pause}></button>
-          <Link to={ "/" + this.props.match.params.clientId + "/" + this.props.match.params.projectId + "/logs"}>Logs</Link>
+          <h1 className="timer">{this.getTimer()}</h1>
+          <button onClick={!this.state.ticking ? this.play : this.pause} className={!this.state.ticking ? 'icon-play' : 'icon-pause'}></button>
         </div>
       </section>
     )
