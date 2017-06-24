@@ -1,18 +1,14 @@
-[
-  {
+{
+  "1498275313738": {
     "name": "Flaming Good Pizza Co.",
     "projects": [
-      "Website",
-      "Delivery",
-      "Pizza Oven"
+      "1498275313738"
     ]
   },
-  {
+  "1498275313734": {
     "name": "William Control",
     "projects": [
-      "Website",
-      "Delivery",
-      "Controls"
+      "1498275313740"
     ]
   }
-]
+}
