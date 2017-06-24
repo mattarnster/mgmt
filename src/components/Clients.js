@@ -18,7 +18,10 @@ class Clients extends PureComponent {
       title: 'Add New Client',
       input: 'text',
       showCancelButton: true,
-      confirmButtonText: 'Submit',
+      confirmButtonText: '<span className="icon-cog"></span>',
+      confirmButtonColor: '#ffffff',
+      cancelButtonText: '<i className="icon-cog"></i>',
+      cancelButtonColor: '#ffffff',
       showLoaderOnConfirm: true,
       preConfirm: function (name) {
         return new Promise(function (resolve, reject) {
@@ -42,7 +45,7 @@ class Clients extends PureComponent {
       <section className="card">
         <header>
           <h1>Clients</h1>
-          <button onClick={this.addClient}>+</button>
+          <button onClick={this.addClient} className="icon-plus"></button>
         </header>
         <div className="card-body">
 

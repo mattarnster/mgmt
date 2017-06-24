@@ -15,7 +15,7 @@ export default class MgmtIndex extends PureComponent {
       <div>
         <Header />
           <Router>
-            <div>
+            <div className="main-panel">
               <Route path="/" component={Clients} />
               <Route path="/:clientId"  component={Projects} />
               <Route path="/:clientId/:projectId"  component={Timer} />

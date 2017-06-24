@@ -6,7 +6,7 @@ export default class ListItem extends PureComponent {
     return (
       <div className="card-list-item">
         <Link to={'/'+this.props.itemKey}>{this.props.data.name}</Link>
-        <button>...</button>
+        <button className="icon-dots-three-vertical"></button>
       </div>
     )
   }
