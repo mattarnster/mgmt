@@ -58,7 +58,6 @@ export default class localStorageHelper {
       return logs
     }
     putLogs(logs) {
-      console.log(logs)
       let newLogs = JSON.stringify(logs)
       window.localStorage.setItem('logs', newLogs)
     }
