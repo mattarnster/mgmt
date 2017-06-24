@@ -7,6 +7,16 @@ header.header {
   span.icon-clock {
     font-size: 25px;
   }
+  span.icon-cog {
+    font-size: 25px;
+  }
+  .settings-container {
+    transition: 0.3s all ease;
+  }
+  .settings-container:hover {
+    transform: rotate(90deg);
+  }
+
   span.logo-letter {
     font-size: 25px;
     margin-left: 10px;
@@ -15,26 +25,47 @@ header.header {
     font-weight: 100;
     opacity: 0;
     left: 10px;
-    transition: 0.5s all ease;
+    transition: 0.3s all ease;
+    pointer-events: none;
   }
   span.logo-letter.one {
-    transition: 0.5s all ease;
+    transition: 0.3s all ease;
   }
   span.logo-letter.two {
-    transition: 0.5s 0.1s all ease;
+    transition: 0.3s 0.1s all ease;
   }
   span.logo-letter.three {
-    transition: 0.5s 0.2s all ease;
+    transition: 0.3s 0.2s all ease;
   }
   span.logo-letter.four {
-    transition: 0.5s 0.3s all ease;
+    transition: 0.3s 0.3s all ease;
   }
-
   .logo-container:hover {
     span.logo-letter {
       opacity: 1;
       left: 0px;
     }
+  }
 
+  .search-container form {
+    input {
+      background-color: transparent;
+      border: none;
+      color: $white;
+      font-size: 18px;
+      font-weight: 100;
+      position: relative;
+      top: -3px;
+      &::placeholder {
+        color: $white;
+      }
+    }
+    button {
+      font-size: 25px;
+      background-color: transparent;
+      border: none;
+      color: $white;
+      cursor: pointer;
+    }
   }
 }

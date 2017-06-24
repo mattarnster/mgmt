@@ -12,10 +12,13 @@ export default class Header extends PureComponent {
           <span className="logo-letter four">T</span>
         </div>
         <div className="search-container">
-
+          <form action="">
+            <input type="text" id="searchInput" placeholder="Search..."/>
+            <button type="button" className="icon-search"></button>
+          </form>
         </div>
         <div className="settings-container">
-
+          <span className="icon-cog"></span>
         </div>
       </header>
     )
