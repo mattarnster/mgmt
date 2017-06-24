@@ -8,12 +8,6 @@ import localStorageHelper from './helpers/localStorageHelper'
 
 const localStorage = new localStorageHelper()
 
-
-import projects from './projects'
-import clients from './clients'
-import logs from './logs'
-import settings from './settings'
-
 // Default state
 const defaultState = {
     projects: [],

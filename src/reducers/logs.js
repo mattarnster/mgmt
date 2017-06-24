@@ -1,4 +1,4 @@
-export const logs = (state = [], action) => {
+const logs = (state = [], action) => {
   switch(action.type) {
     default:
       return state
