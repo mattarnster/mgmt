@@ -62,7 +62,7 @@ class Projects extends PureComponent {
 }
 const mapStateToProps = (state,props) => {
   return {
-    projects: ProjectFilter(state,props)
+    projects: ProjectFilter(state.projects,props.match.params.clientId,'clientId')
   }
 }
 

@@ -1,17 +1,29 @@
 import { createSelector } from 'reselect'
 
 
-const getVisibilityFilter = (state, props) => props.match.params.clientId
-const getProjects = (state, props) => state.projects
+const Filter = (state, props) => props
+const Projects = (state, props) => state
+const vFilter = (state, props, filter) => filter;
 
 export const ProjectFilter = createSelector(
-  [ getVisibilityFilter, getProjects ],
-  (visibilityFilter, projects) => {
+  [ Filter, Projects,vFilter ],
+  (Filter, Projects,vFilter) => {
+    switch (vFilter) {
 
-    let reProjects = Object.assign({}, ...Object.keys(projects).map(k => (
-      (projects[k].clientId === visibilityFilter ? {[k]: {name:projects[k].name}} : null))
-    ));
+      case "clientId":
 
-    return reProjects
+        return Object.assign({}, ...Object.keys(Projects).map(k => (
+          (Projects[k].clientId === Filter ? {[k]: {name:Projects[k].name}} : null))
+        ));
+
+      case "key":
+
+        return {[Filter]:{totalTime:Projects[Filter].totalTime}}
+
+      return null
+
+    }
+
+
   }
 )

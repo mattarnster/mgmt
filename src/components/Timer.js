@@ -1,7 +1,13 @@
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
+import { ProjectFilter } from '../selectors/ProjectFilter'
 
-export default class Timer extends PureComponent {
+import { addProject } from '../actions/actionCreators'
+
+
+class Timer extends PureComponent {
   render() {
+    console.log(this.props);
     return (
       <section className="card">
         <header>
@@ -15,3 +21,11 @@ export default class Timer extends PureComponent {
     )
   }
 }
+
+const mapStateToProps = (state,props) => {
+  return {
+    projects: ProjectFilter(state.projects,props.match.params.projectId,'key')
+  }
+}
+
+export default connect(mapStateToProps)(Timer)
