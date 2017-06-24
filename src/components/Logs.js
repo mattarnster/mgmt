@@ -29,9 +29,9 @@ class Logs extends PureComponent {
         <header>
           <h1>Logs</h1>
           <nav>
-            <button onClick={ () => this.setFilter('Day') }>Day</button>
-            <button onClick={ () => this.setFilter('Week') }>Week</button>
-            <button onClick={ () => this.setFilter('Month') }>Month</button>
+            <button className={ this.props.logFilterDuration === 'Day' ? 'active' : '' } onClick={ () => this.setFilter('Day') }>Day</button>
+            <button className={ this.props.logFilterDuration === 'Week' ? 'active' : '' } onClick={ () => this.setFilter('Week') }>Week</button>
+            <button className={ this.props.logFilterDuration === 'Month' ? 'active' : '' } onClick={ () => this.setFilter('Month') }>Month</button>
           </nav>
         </header>
         <div className="card-body">
@@ -46,7 +46,8 @@ class Logs extends PureComponent {
 
 const mapStateToProps = (state, props) => {
   return {
-    logs: LogFilter(state, props)
+    logs: LogFilter(state, props),
+    logFilterDuration: state.logFilterDuration
   }
 }
 
