@@ -1,8 +1,8 @@
-export function addClient(client) {
+export function addClient(clientName) {
   return {
     type: "ADD_CLIENT",
     payload: {
-      client
+      clientName
     }
   }
 }

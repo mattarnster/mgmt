@@ -1,4 +1,4 @@
-const projects = (state = [], action) => {
+const projects = (state = {}, action) => {
   switch(action.type) {
     default:
       return state
