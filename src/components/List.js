@@ -13,11 +13,20 @@ export default class List extends PureComponent {
       return <ListItem  data={this.props.data[key]} key={key} itemKey={key}/>
     })
   }
+  noData() {
+    return(
+      <div className="no-data">
+      <i>nope</i>
+      <p>No data yet</p>
+      <p><button>Add</button></p>
+      </div>
+    )
+  }
 
   render() {
     return (
       <nav className="card-list">
-        { this.props.data ? this.renderListItems() : null}
+        { this.props.data ? this.renderListItems() : this.noData()}
       </nav>
     )
   }

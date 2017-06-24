@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react'
 import List from './List'
 
+import { connect } from 'react-redux'
 
-export default class Projects extends PureComponent {
+class Projects extends PureComponent {
+
   render() {
     return (
       <section className="card">
@@ -12,14 +14,6 @@ export default class Projects extends PureComponent {
         </header>
         <div className="card-body">
 
-          // If no projects
-          <div className="card-empty">
-            Nothing here do something
-            <button>Add blabla</button>
-          </div>
-
-
-          // If projects
           <List data={ this.props.projects } />
 
         </div>
@@ -27,3 +21,10 @@ export default class Projects extends PureComponent {
     )
   }
 }
+const mapStateToProps = (state,props) => {
+  return {
+    projects: state.clients[props.match.params.clientId].projects
+  }
+}
+
+export default connect(mapStateToProps)(Projects)
