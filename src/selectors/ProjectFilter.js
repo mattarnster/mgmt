@@ -20,6 +20,7 @@ export const ProjectFilter = createSelector(
 
         return {[Filter]:{totalTime:Projects[Filter].totalTime}}
 
+      default:
       return null
 
     }
