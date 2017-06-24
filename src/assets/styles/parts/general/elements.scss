@@ -17,28 +17,43 @@ body.swal2-shown {
     font-weight: 100;
     font-size: 26.52px;
     color: var(--text);
-    padding-bottom: 10px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
   }
   .swal2-confirm.swal2-styled {
     padding: 0 !important;
+    background-color: transparent !important;
   }
   .swal2-confirm.swal2-styled:before {
     font-family: 'icomoon';
-    content: "\e90c";
-    color: var(--swalgreen);
-    font-size: 25px;
-    padding: 0 5px !important;
+    content: "\e90f";
+    color: var(--swaltext);
+    font-size: 35px;
+    padding: 0 20px !important;
+    opacity: 0.3;
+    transition: 0.3s all ease;
 
+  }
+  .swal2-confirm.swal2-styled:hover:before {
+    opacity: 1;
   }
   .swal2-cancel.swal2-styled {
     padding: 0 !important;
+    background-color: transparent !important;
   }
   .swal2-cancel.swal2-styled:before {
     font-family: 'icomoon';
-    content: "\e90d";
-    color: var(--swalred);
-    font-size: 25px;
-    padding: 0 5px !important;
+    content: "\e90e";
+    color: var(--swaltext);
+    font-size: 35px;
+    padding: 0 20px !important;
+    opacity: 0.3;
+    transition: 0.3s all ease;
+  }
+  .swal2-cancel.swal2-styled:hover:before {
+    opacity: 1;
   }
 
 }

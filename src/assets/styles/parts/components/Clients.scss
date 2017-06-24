@@ -64,3 +64,24 @@
     }
   }
 }
+
+section.card:last-child:not(:first-child) {
+  transform: translateX(-50%);
+}
+section.card:nth-last-child(2) {
+  transform: translateX(-60%) scale(0.9);
+  transition: 0.3s all ease;
+  opacity: 0.8;
+}
+section.card:nth-last-child(2):hover {
+  transform: translateX(-60%) scale(0.91);
+  opacity: 1;
+}
+section.card:nth-last-child(3) {
+  transform: translateX(-120%);
+  display: none;
+}
+section.card:nth-last-child(4) {
+  transform: translateX(-120%);
+  display: none;
+}

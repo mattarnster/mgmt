@@ -4,9 +4,7 @@ $white: #FFF;
   --card: #fff;
   --text: #222222;
   --border: rgba(#222,0.15);
-  --swalgreen: #27ae60;
-  --swalred: #c0392b;
-
+  --swaltext: #222;
 }
 body.dark {
   --card: #000;
@@ -15,11 +13,11 @@ body.dark {
 }
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?7w137b');
-  src:  url('../fonts/icomoon.eot?7w137b#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?7w137b') format('truetype'),
-    url('../fonts/icomoon.woff?7w137b') format('woff'),
-    url('../fonts/icomoon.svg?7w137b#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?6ba3o4');
+  src:  url('../fonts/icomoon.eot?6ba3o4#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?6ba3o4') format('truetype'),
+    url('../fonts/icomoon.woff?6ba3o4') format('woff'),
+    url('../fonts/icomoon.svg?6ba3o4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,10 +37,16 @@ body.dark {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-times-circle:before {
+  content: "\e90e";
+}
+.icon-check-circle:before {
+  content: "\e90f";
+}
 .icon-dots-three-vertical:before {
   content: "\e900";
 }
-.icon-check-circle:before {
+.icon-check-circle2:before {
   content: "\e901";
 }
 .icon-check:before {
