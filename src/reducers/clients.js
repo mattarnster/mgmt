@@ -8,8 +8,7 @@ const clients = (state = {}, action) => {
         name: action.payload.clientName
       }
       let id = new Date('now')
-      Object.assign({}, state, { [id]: newClient })
-      return state
+      return Object.assign({}, state, { [id]: newClient })
 
     default:
       return state
