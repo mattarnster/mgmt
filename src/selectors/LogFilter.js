@@ -14,10 +14,11 @@ const getName = (logId,duration) =>{
       return date.toLocaleDateString('en-GB',{weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
 
     case "Week":
+
       var  day = date.getDay(),
-      diff = date.getDate() - day + (day === 0 ? -6:1),
-      diffo = date.getDate() - day + (day === 6 ? 6:0)
-      return new Date(date.setDate(diff)).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+"  –  "+ new Date(date.setDate(diffo)).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+" "+date.getFullYear()
+      diff = date.getDate() - day + (day === 0 ? -6:1)
+
+      return new Date(date.setDate(diff)).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+"  –  "+ new Date(date.setDate((diff + 6))).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+" "+date.getFullYear()
 
     default:
       return date.toLocaleDateString('en-GB',{ year: 'numeric', month: 'long'})
