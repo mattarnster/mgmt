@@ -46,3 +46,12 @@ export function processLog(runTime, projectId) {
   }
 }
 
+export function changeLogFilterDuration(duration) {
+  return {
+    type: "SWITCH_LOG_FILTER_DURATION",
+    payload: {
+      duration
+    }
+  }
+}
+

@@ -15,6 +15,7 @@ const defaultState = {
     projects: localStorage.getProjects(),
     clients: localStorage.getClients(),
     logs: localStorage.getLogs(),
+    logFilterDuration: 'Day',
     settings: []
 }
 

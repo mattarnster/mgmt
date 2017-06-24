@@ -1,24 +1,22 @@
 import { createSelector } from 'reselect'
 
 
-const Filter = (state, props) => props
-const Projects = (state, props) => state
-const vFilter = (state, props, filter) => filter;
+const projects = (projects) => projects
+const clientId = (projects, clientId) => clientId
+const filterByField = (projects, clientId, filterByField) => filterByField;
 
 export const ProjectFilter = createSelector(
-  [ Filter, Projects,vFilter ],
-  (Filter, Projects,vFilter) => {
-    switch (vFilter) {
+  [ clientId, projects, filterByField ],
+  (clientId, projects, filterByField) => {
 
+    switch (filterByField) {
       case "clientId":
-
-        return Object.assign({}, ...Object.keys(Projects).map(k => (
-          (Projects[k].clientId === Filter ? {[k]: {name:Projects[k].name}} : null))
+        return Object.assign({}, ...Object.keys(projects).map(k => (
+          (projects[k].clientId === clientId ? {[k]: {name:projects[k].name}} : null))
         ));
 
       case "key":
-
-        return {[Filter]:{totalTime:Projects[Filter].totalTime}}
+        return {[clientId]:{totalTime:projects[clientId].totalTime}}
 
       default:
       return null

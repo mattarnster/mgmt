@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ProjectFilter } from '../selectors/ProjectFilter'
 
+import { Link } from 'react-router-dom'
+
 import { addTimeToProject, processLog } from '../actions/actionCreators'
 
 
@@ -79,7 +81,7 @@ class Timer extends Component {
         </header>
         <div className="card-body">
           <button onClick={!this.state.ticking ? this.play : this.pause}></button>
-          <button>Logs</button>
+          <Link to={ "/" + this.props.match.params.clientId + "/" + this.props.match.params.projectId + "/logs"}>Logs</Link>
         </div>
       </section>
     )

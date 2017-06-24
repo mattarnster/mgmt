@@ -1,4 +1,7 @@
 import { generateExists } from '../helpers/generateExists'
+import localStorageHelper from '../helpers/localStorageHelper'
+
+var ls = new localStorageHelper()
 
 const logs = (state = {}, action) => {
   switch(action.type) {
@@ -17,11 +20,13 @@ const logs = (state = {}, action) => {
 
         let newState = Object.assign({}, state, {[filteredByAll[0]]: timeLog})
 
+        ls.putLogs(newState)
+
         return newState
       }
 
       // One doesn't exist for this period, create it.
-      let newId = Date.now()
+      let newId = Date.now() + action.payload.type[0]
       let newTimeLog = {
         projectId: action.payload.projectId,
         time: action.payload.runTime,
@@ -31,6 +36,8 @@ const logs = (state = {}, action) => {
 
 
       let newState = Object.assign({}, state, {[newId]: newTimeLog})
+
+      ls.putLogs(newState)
 
 
       return newState
