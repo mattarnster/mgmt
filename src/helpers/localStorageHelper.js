@@ -3,7 +3,7 @@ export default class localStorageHelper {
     /**
      * Clients
      * Projects
-     * Times
+     * Logs
      */
 
 
@@ -22,9 +22,9 @@ export default class localStorageHelper {
     deleteProject() {}
 
     /**
-     * Times
+     * Log
      */
-    getTimes() {}
-    putTime() {}
-    deleteTime() {}
+    getLogs() {}
+    putLog() {}
+    deleteLog() {}
 }
