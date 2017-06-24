@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import mgmtIndex from './views/mgmtIndex'
 
+import '../assets/styles/main.css'
+
 export default class AppMain extends PureComponent {
   render() {
     return (
