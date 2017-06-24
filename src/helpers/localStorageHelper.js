@@ -18,7 +18,10 @@ export default class localStorageHelper {
     /**
      * Clients
      */
-    getClients() {}
+    getClients() {
+      let clients = JSON.parse(window.localStorage.getItem('clients'))
+      return clients
+    }
     putClient() {}
     deleteClient() {}
 

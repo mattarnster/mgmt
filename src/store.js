@@ -13,7 +13,7 @@ localStorage.init()
 // Default state
 const defaultState = {
     projects: [],
-    clients: [],
+    clients: localStorage.getClients(),
     logs: [],
     settings: []
 }
