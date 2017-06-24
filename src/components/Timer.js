@@ -11,48 +11,61 @@ class Timer extends Component {
     super(props)
 
     this.state = {
+      roughTime: props.projects[props.match.params.projectId].totalTime,
       time: props.projects[props.match.params.projectId].totalTime,
       ticking: false
     }
 
-    this.getTimer = this.getTimer.bind(this);
-    this.play = this.play.bind(this);
-    this.pause = this.pause.bind(this);
+    this.getTimer = this.getTimer.bind(this)
+    this.play = this.play.bind(this)
+    this.pause = this.pause.bind(this)
 
   }
 
   getTimer(){
-    let time = new Date(this.state.time * 1000).toISOString().substr(11, 8);
-    document.title = time;
-    return time;
+    let time = new Date(this.state.roughTime * 1000).toISOString().substr(11, 8)
+    document.title = time
+    return time
   }
 
   play(){
       let that = this;
       let ticking = setInterval(function(){
 
-        let time = that.state.time;
-        time++;
+        let time = that.state.roughTime
+        time++
         that.setState({
-          time:time
+          roughTime:time
         })
 
       },1000);
 
+
       this.setState({
-        ticking:ticking
+        ticking:ticking,
+        startTime:  Date.now()
       })
   }
 
   pause(){
 
-    let ticking = this.state.ticking;
-    clearInterval(ticking);
-    this.setState({
-      ticking:false
-    });
+    let ticking = this.state.ticking
+    clearInterval(ticking)
 
-    this.props.dispatch(addTimeToProject(this.props.match.params.projectId, this.state.time))
+    // fix issue with inctive tabs being throttled
+    let startTime = this.state.startTime;
+    let endTime = Date.now();
+
+    let runTime = Math.round((endTime - startTime) / 1000)
+
+    let finalTime = this.state.time + runTime
+
+    this.setState({
+      ticking:false,
+      roughTime:finalTime
+    })
+
+    this.props.dispatch(addTimeToProject(this.props.match.params.projectId, finalTime))
   }
 
 
