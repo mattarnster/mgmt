@@ -8,6 +8,8 @@ import localStorageHelper from './helpers/localStorageHelper'
 
 const localStorage = new localStorageHelper()
 
+localStorage.init()
+
 // Default state
 const defaultState = {
     projects: [],

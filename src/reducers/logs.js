@@ -4,3 +4,5 @@ const logs = (state = [], action) => {
       return state
   }
 }
+
+export default logs

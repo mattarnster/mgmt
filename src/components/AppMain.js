@@ -13,7 +13,7 @@ export default class AppMain extends PureComponent {
       <Provider store={ store }>
         <Router>
           <div>
-            <Route path="/" exact component={ mgmtIndex } />
+            <Route path="/" component={ mgmtIndex } />
           </div>
         </Router>
       </Provider>

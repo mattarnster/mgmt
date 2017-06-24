@@ -4,3 +4,5 @@ const clients = (state = [], action) => {
       return state
   }
 }
+
+export default clients
