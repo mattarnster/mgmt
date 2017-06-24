@@ -1,10 +1,31 @@
 .card.timer {
   min-height: 200px;
+  height: auto;
+  header a {
+    font-size: 14px;
+    color: var(--text);
+    i {
+      margin-left: 5px;
+    }
+  }
   .card-body {
     h1.timer {
       font-size: 83.47px;
       text-align: center;
       margin-top: 25px;
+      font-weight: 500;
+    }
+    button {
+      background-color: transparent;
+      font-size: 35px;
+      border: none;
+      margin-top: 10px;
+      color: rgba(#222,0.3);
+      transition: 0.3s all ease;
+      cursor: pointer;
+      &:hover {
+        color: rgba(#222,1);
+      }
     }
   }
 }

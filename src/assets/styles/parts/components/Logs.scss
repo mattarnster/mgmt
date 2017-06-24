@@ -1,4 +1,11 @@
 .card.logs {
+  header button {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+  header button:before {
+    content: '•';
+  }
   header button:hover {
     transform: none;
   }
