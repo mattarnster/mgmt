@@ -98,3 +98,13 @@ section.card:nth-last-child(4) {
   transform: translateX(-120%);
   display: none;
 }
+
+@media only screen and (max-width: 650px) {
+  section.card:nth-last-child(2) {
+    transform: translateX(0);
+    display: none;
+  }
+  section.card:last-child:not(:first-child) {
+    transform: translateX(0);
+  }
+}

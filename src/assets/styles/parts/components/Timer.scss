@@ -33,3 +33,8 @@
 .card.timer .card-body {
   text-align: center;
 }
+@media only screen and (max-width: 470px) {
+  .card.timer .card-body h1.timer {
+    font-size: 55px;
+  }
+}
