@@ -35,6 +35,13 @@
       color: $black;
     }
   }
+  .card-body {
+    height: 100%;
+  }
+  nav.card-list {
+    height: 93%;
+    overflow-y: scroll;
+  }
   .card-list-item {
     padding: 25px 0;
     font-weight: 100;
@@ -73,6 +80,9 @@ section.card:nth-last-child(2) {
   transform: translateX(-60%) scale(0.9);
   transition: 0.3s all ease;
   opacity: 0.8;
+  * {
+    pointer-events: none;
+  }
 }
 section.card:nth-last-child(2):hover {
   transform: translateX(-60%) scale(0.91);
