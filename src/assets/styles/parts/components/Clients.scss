@@ -1,5 +1,5 @@
 .main-panel {
-  height: calc(100vh - 160px);
+  height: calc(100vh - 185px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,6 +8,7 @@
   width: 500px;
   max-width: 90%;
   height: 75%;
+  min-height: 300px;
   padding: 50px;
   border-radius: 5px;
   background-color: var(--card);
@@ -33,6 +34,13 @@
       transform: rotate(90deg);
       color: $black;
     }
+  }
+  .card-body {
+    height: 100%;
+  }
+  nav.card-list {
+    height: 93%;
+    overflow-y: scroll;
   }
   .card-list-item {
     padding: 25px 0;
@@ -72,6 +80,9 @@ section.card:nth-last-child(2) {
   transform: translateX(-60%) scale(0.9);
   transition: 0.3s all ease;
   opacity: 0.8;
+  * {
+    pointer-events: none;
+  }
 }
 section.card:nth-last-child(2):hover {
   transform: translateX(-60%) scale(0.91);

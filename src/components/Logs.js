@@ -25,7 +25,7 @@ class Logs extends PureComponent {
   render() {
 
     return (
-      <section className="card">
+      <section className="card logs">
         <header>
           <h1>Logs</h1>
           <nav>

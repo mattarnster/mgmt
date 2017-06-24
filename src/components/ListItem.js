@@ -7,8 +7,9 @@ export default class ListItem extends PureComponent {
       <div className="card-list-item">
         {this.props.sPath ? <Link to={this.props.sPath + this.props.itemKey}>{this.props.data.name}</Link> :
         <div>{this.props.data.name}</div>}
-        <button className="icon-dots-three-vertical"></button>
+        {this.props.sPath ? <button className="icon-dots-three-vertical"></button> : <div>{this.props.data.date}</div>}
       </div>
     )
   }
 }
+
