@@ -4,7 +4,7 @@ export default class Footer extends PureComponent {
   render() {
     return (
       <div>
-        <h1>Clients</h1>
+        <h1>Footer</h1>
       </div>
     )
   }
