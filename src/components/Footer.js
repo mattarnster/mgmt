@@ -12,8 +12,8 @@ export default class Footer extends PureComponent {
         <ul>
           <li><a><i className="icon-user"></i><p>Clients</p></a></li>
           <li disabled={ projectsActiveState ? false : true }><a><i className="icon-folder"></i><p>Projects</p></a></li>
-          <li disabled={ timerActiveState ? false : true }><span><i className="icon-clock"></i><p>Timer</p></span></li>
-          <li disabled={ logActiveState ? false : true }><span><i className="icon-clipboard"></i><p>Log</p></span></li>
+          <li disabled={ timerActiveState ? false : true }><a><i className="icon-clock"></i><p>Timer</p></a></li>
+          <li disabled={ logActiveState ? false : true }><a><i className="icon-clipboard"></i><p>Log</p></a></li>
         </ul>
       </footer>
     )
