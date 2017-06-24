@@ -18,7 +18,10 @@ class Clients extends PureComponent {
       title: 'Add New Client',
       input: 'text',
       showCancelButton: true,
-      confirmButtonText: 'Submit',
+      confirmButtonText: '<span className="icon-cog"></span>',
+      confirmButtonColor: '#ffffff',
+      cancelButtonText: '<i className="icon-cog"></i>',
+      cancelButtonColor: '#ffffff',
       showLoaderOnConfirm: true,
       preConfirm: function (name) {
         return new Promise(function (resolve, reject) {

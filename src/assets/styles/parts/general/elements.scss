@@ -1,0 +1,44 @@
+body.swal2-shown {
+  #root {
+    filter: blur(25px);
+  }
+  .swal2-container.swal2-shown {
+    background-color: rgba(#222,0.3);
+  }
+  .swal2-modal.swal2-show {
+    padding: 50px !important;
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px -3px rgba(0,0,0,0.25);
+    background-color: var(--card);
+    min-height: auto !important;
+  }
+  .swal2-title {
+    font-family: 'Heebo';
+    font-weight: 100;
+    font-size: 26.52px;
+    color: var(--text);
+    padding-bottom: 10px;
+  }
+  .swal2-confirm.swal2-styled {
+    padding: 0 !important;
+  }
+  .swal2-confirm.swal2-styled:before {
+    font-family: 'icomoon';
+    content: "\e90c";
+    color: var(--swalgreen);
+    font-size: 25px;
+    padding: 0 5px !important;
+
+  }
+  .swal2-cancel.swal2-styled {
+    padding: 0 !important;
+  }
+  .swal2-cancel.swal2-styled:before {
+    font-family: 'icomoon';
+    content: "\e90d";
+    color: var(--swalred);
+    font-size: 25px;
+    padding: 0 5px !important;
+  }
+
+}
