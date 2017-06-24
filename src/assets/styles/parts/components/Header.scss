@@ -1,12 +1,22 @@
+header.header + div {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height:calc(100% - 80px);
+}
 header.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px;
   color: $white;
+  height: 80px;
+  width: 100%;
+
   span.icon-clock {
     font-size: 25px;
   }
+
   span.icon-cog {
     font-size: 25px;
   }

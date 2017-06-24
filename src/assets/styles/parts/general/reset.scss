@@ -23,40 +23,37 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-	font-family: 'Heebo';
-	min-height: 100vh;
-	min-width: 100vw;
-  background: linear-gradient(146deg, rgba(247,152,29,0.75), rgba(227,17,96,0.67), rgba(104,121,227,0.67), rgba(112,93,188,0.67), rgba(103,188,227,0.67), rgba(62,204,142,0.67));
-background-size: 1200% 1200%;
+#root,
+#root > div {
+  min-height: 100vh;
+}
+#root > div {
+  display:flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
--webkit-animation: AnimationName 60s ease infinite;
--moz-animation: AnimationName 60s ease infinite;
-animation: AnimationName 60s ease infinite;
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:9% 0%}
-    50%{background-position:92% 100%}
-    100%{background-position:9% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:9% 0%}
-    50%{background-position:92% 100%}
-    100%{background-position:9% 0%}
-}
-@keyframes AnimationName {
-    0%{background-position:9% 0%}
-    50%{background-position:92% 100%}
-    100%{background-position:9% 0%}
-}
-	overflow: hidden;
-}
 html {
   background-image: url('../images/poly.png');
   background-size: cover;
   background-position: center;
 }
+body {
+  min-height:100vh;
+	line-height: 1;
+	font-family: 'Heebo';
+	min-width: 100vw;
+  background: linear-gradient(146deg, rgba(247,152,29,0.75), rgba(227,17,96,0.67), rgba(104,121,227,0.67), rgba(112,93,188,0.67), rgba(103,188,227,0.67), rgba(62,204,142,0.67));
+  background-size: 1200% 1200%;
+  animation: backgroundAnimation 60s ease infinite;
+}
+@keyframes backgroundAnimation {
+    0%{background-position:9% 0%}
+    50%{background-position:92% 100%}
+    100%{background-position:9% 0%}
+}
+
 ol, ul {
 	list-style: none;
 }

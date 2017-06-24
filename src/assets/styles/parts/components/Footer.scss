@@ -3,54 +3,48 @@ footer.footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  align-self:flex-end;
+  padding:25px 0;
+  box-sizing: content-box;
+
   ul {
     display: flex;
     flex-direction: row;
-    li[disabled] {
-      a {
-        background-color: rgba(#222,0.14);
-        display: inline-block;
-        height: 80px;
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: rgba(#fff,0.20);
-        font-weight: 100;
-        cursor: not-allowed;
-        i {
-          margin-bottom: 5px;
-          font-size: 20px;
-        }
-      }
-    }
+
     li {
       text-align: center;
       margin-left: 1px;
       position: relative;
-      a {
-        background-color: rgba(#222,0.14);
-        display: inline-block;
-        height: 80px;
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: var(--card);
-        font-weight: 100;
-        cursor: pointer;
-        transition: 0.3s all ease;
-        i {
-          margin-bottom: 5px;
-          font-size: 20px;
-        }
+    }
+    li span,
+    li a {
+      background-color: rgba(#222,0.14);
+      display: inline-block;
+      height: 80px;
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: rgba(#fff,0.20);
+      font-weight: 100;
+      cursor: not-allowed;
+      i {
+        margin-bottom: 5px;
+        font-size: 20px;
       }
-      a:hover {
+    }
+    li a {
+      background-color: rgba(#222,0.14);
+      color: var(--card);
+      cursor: pointer;
+
+      &:hover {
         background-color: rgba(#222,0.30);
       }
     }
+
     li:first-child {
       margin-left: none;
     }
