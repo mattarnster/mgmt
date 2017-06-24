@@ -25,7 +25,7 @@ const clients = (state = {}, action) => {
       //ls = new localStorageHelper()
       //ls.putClients(newState)
 
-      return newState
+      return state
 
     default:
       return state
