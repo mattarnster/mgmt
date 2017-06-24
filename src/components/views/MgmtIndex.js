@@ -15,15 +15,16 @@ export default class MgmtIndex extends PureComponent {
       <div>
         <Header />
           <Router>
-            <div className="main-panel">
-              <Route path="/" component={Clients} />
-              <Route path="/:clientId"  component={Projects} />
-              <Route path="/:clientId/:projectId"  component={Timer} />
-              <Route path="/:clientId/:projectId/logs"  component={Logs} />
+            <div>
+              <div className="main-panel">
+                <Route path="/" component={Clients} />
+                <Route path="/:clientId"  component={Projects} />
+                <Route path="/:clientId/:projectId"  component={Timer} />
+                <Route path="/:clientId/:projectId/logs"  component={Logs} />
+              </div>
+              <Route path="*" component={Footer} />
             </div>
           </Router>
-
-        <Footer />
       </div>
     )
   }
