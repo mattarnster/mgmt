@@ -12,6 +12,7 @@ class Clients extends PureComponent {
   }
 
   addClient() {
+    var that = this;
 
     window.swal({
       title: 'Add New Client',
@@ -21,18 +22,17 @@ class Clients extends PureComponent {
       showLoaderOnConfirm: true,
       preConfirm: function (name) {
         return new Promise(function (resolve, reject) {
-          setTimeout(function() {
+
             if (name === '') {
               reject('Please enter a name')
             } else {
               resolve()
             }
-          }, 2000)
         })
       },
       allowOutsideClick: false
     }).then(function (name) {
-      this.props.dispatch(addClient(name))
+      that.props.dispatch(addClient(name))
     })
 
   }
