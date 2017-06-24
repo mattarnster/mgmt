@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ProjectFilter } from '../selectors/ProjectFilter'
 
-import { addTimeToProject } from '../actions/actionCreators'
+import { addTimeToProject, processLog } from '../actions/actionCreators'
 
 
 class Timer extends Component {
@@ -61,11 +61,13 @@ class Timer extends Component {
     let finalTime = this.state.time + runTime
 
     this.setState({
-      ticking:false,
-      roughTime:finalTime
+      ticking: false,
+      roughTime: finalTime,
+      time: finalTime
     })
 
     this.props.dispatch(addTimeToProject(this.props.match.params.projectId, finalTime))
+    this.props.dispatch(processLog(finalTime, this.props.match.params.projectId))
   }
 
 

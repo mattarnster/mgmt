@@ -14,7 +14,7 @@ localStorage.init()
 const defaultState = {
     projects: localStorage.getProjects(),
     clients: localStorage.getClients(),
-    logs: [],
+    logs: localStorage.getLogs(),
     settings: []
 }
 

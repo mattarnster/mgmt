@@ -1,6 +1,7 @@
 
 import clientData from '../mockData/clients.json'
 import projectData from '../mockData/projects.json'
+import logData from '../mockData/logs.json'
 
 export default class localStorageHelper {
     /**
@@ -11,12 +12,13 @@ export default class localStorageHelper {
 
     init() {
       if (window.localStorage.getItem('clients') === null) {
-        console.log('got here 1')
         window.localStorage.setItem('clients', JSON.stringify(clientData))
       }
       if (window.localStorage.getItem('projects') === null) {
-        console.log('got here 2')
         window.localStorage.setItem('projects', JSON.stringify(projectData))
+      }
+      if (window.localStorage.getItem('logs') === null) {
+        window.localStorage.setItem('logs', JSON.stringify(logData))
       }
     }
 
@@ -51,7 +53,10 @@ export default class localStorageHelper {
     /**
      * Log
      */
-    getLogs() {}
+    getLogs() {
+      let logs = JSON.parse(window.localStorage.getItem('logs'))
+      return logs
+    }
     putLog() {}
     deleteLog() {}
 }

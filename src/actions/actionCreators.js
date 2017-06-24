@@ -27,3 +27,22 @@ export function addTimeToProject(projectId, totalTime) {
   }
 }
 
+export function processLogInternal(type, runTime, projectId) {
+  return {
+    type: "PROCESS_LOG",
+    payload: {
+      type,
+      runTime,
+      projectId
+    }
+  }
+}
+
+export function processLog(runTime, projectId) {
+  return (dispatch) => {
+    dispatch(processLogInternal('Month', runTime, projectId))
+    dispatch(processLogInternal('Week', runTime, projectId))
+    dispatch(processLogInternal('Day', runTime, projectId))
+  }
+}
+
