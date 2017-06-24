@@ -1,3 +1,5 @@
+import localStorageHelper from '../helpers/localStorageHelper'
+
 const clients = (state = {}, action) => {
   switch(action.type) {
 
@@ -5,10 +7,14 @@ const clients = (state = {}, action) => {
       console.log(state)
       console.log(action)
       let newClient = {
-        name: action.payload.clientName
+        name: action.payload.clientName,
+        projects: []
       }
       let id = Date.now()
-      return Object.assign({}, state, { [id]: newClient })
+      let newClients = Object.assign({}, state, { [id]: newClient })
+      let ls = new localStorageHelper()
+      ls.putClients(newClients)
+      return newClients
 
     default:
       return state
