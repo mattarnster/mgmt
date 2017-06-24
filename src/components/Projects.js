@@ -53,7 +53,7 @@ class Projects extends PureComponent {
         </header>
         <div className="card-body">
 
-          <List data={ this.props.projects } />
+          <List data={ this.props.projects } sPath={"/"+this.props.match.params.clientId+"/"}/>
 
         </div>
       </section>
