@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import List from './List'
 
-import { createSelector } from 'reselect'
 import { connect } from 'react-redux'
 import { ProjectFilter } from '../selectors/ProjectFilter'
 
@@ -40,9 +39,8 @@ class Projects extends PureComponent {
       },
       allowOutsideClick: false
     }).then(function (name) {
-      let id = Date.now()
       let clientId = that.props.match.params.clientId
-      that.props.dispatch(addProject(name, id, clientId))
+      that.props.dispatch(addProject(name, clientId))
     })
   }
 

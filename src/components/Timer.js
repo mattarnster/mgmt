@@ -5,7 +5,7 @@ export default class Timer extends PureComponent {
     return (
       <section className="card">
         <header>
-          <h1></h1>
+          <h1>.</h1>
         </header>
         <div className="card-body">
           <button></button>
