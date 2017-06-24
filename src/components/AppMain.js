@@ -12,7 +12,6 @@ export default class AppMain extends PureComponent {
   render() {
     return (
       <Provider store={ store }>
-        <p>test</p>
         <MgmtIndex />
       </Provider>
     )
