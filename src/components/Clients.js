@@ -42,7 +42,7 @@ class Clients extends PureComponent {
       <section className="card">
         <header>
           <h1>Clients</h1>
-          <button onClick={this.addClient}>+</button>
+          <button onClick={this.addClient} className="icon-plus"></button>
         </header>
         <div className="card-body">
 

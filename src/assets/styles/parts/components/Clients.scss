@@ -1,0 +1,66 @@
+.main-panel {
+  height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 500px;
+  max-width: 90%;
+  height: 75%;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: var(--card);
+  box-shadow: 3px 3px 20px -3px rgba(0,0,0,0.25);
+  header {
+    font-size: 26.52px;
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 26.52px;
+      position: relative;
+      top: -3px;
+      cursor: pointer;
+      transition: 0.3s all ease;
+      color: #9f9d9f;
+    }
+    button:hover {
+      transform: rotate(90deg);
+      color: $black;
+    }
+  }
+  .card-list-item {
+    padding: 25px 0;
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    a {
+      color: var(--text);
+      position: relative;
+      top: 2px;
+      opacity: 0.5;
+      transition: 0.3s all ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 15px;
+      color: var(--text);
+      opacity: 0.5;
+      transition: 0.3s all ease;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

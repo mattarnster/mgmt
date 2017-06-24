@@ -1,6 +1,16 @@
-$black: #000;
+$black: #222222;
 $white: #FFF;
+:root {
+  --card: #fff;
+  --text: #222222;
+  --border: rgba(#222,0.15);
 
+}
+body.dark {
+  --card: #000;
+  --text: #222222;
+  --border: rgba(#222,0.15);
+}
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot?i0jkou');
