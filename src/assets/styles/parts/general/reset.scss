@@ -26,17 +26,36 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Heebo';
-	background: rgba(251,147,49,1);
 	min-height: 100vh;
 	min-width: 100vw;
-	background: -moz-linear-gradient(-45deg, rgba(251,147,49,1) 0%, rgba(226,8,99,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(251,147,49,1)), color-stop(100%, rgba(226,8,99,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(251,147,49,1) 0%, rgba(226,8,99,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(251,147,49,1) 0%, rgba(226,8,99,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(251,147,49,1) 0%, rgba(226,8,99,1) 100%);
-	background: linear-gradient(135deg, rgba(251,147,49,1) 0%, rgba(226,8,99,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb9331', endColorstr='#e20863', GradientType=1 );
+  background: linear-gradient(146deg, rgba(247,152,29,0.75), rgba(227,17,96,0.67), rgba(104,121,227,0.67), rgba(112,93,188,0.67), rgba(103,188,227,0.67), rgba(62,204,142,0.67));
+background-size: 1200% 1200%;
+
+-webkit-animation: AnimationName 60s ease infinite;
+-moz-animation: AnimationName 60s ease infinite;
+animation: AnimationName 60s ease infinite;
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:9% 0%}
+    50%{background-position:92% 100%}
+    100%{background-position:9% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:9% 0%}
+    50%{background-position:92% 100%}
+    100%{background-position:9% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:9% 0%}
+    50%{background-position:92% 100%}
+    100%{background-position:9% 0%}
+}
 	overflow: hidden;
+}
+html {
+  background-image: url('../images/poly.png');
+  background-size: cover;
+  background-position: center;
 }
 ol, ul {
 	list-style: none;

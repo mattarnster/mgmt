@@ -37,6 +37,14 @@
 		"oAP": "\/fonts\/icomoon.woff",
 		"oF": 0
 		},
+	"\/images\/poly.png": {
+		"ft": 32768,
+		"iS": 610571,
+		"oA": 0,
+		"oAP": "\/images\/poly.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/styles\/main.css": {
 		"aP": 0,
 		"bl": 0,
