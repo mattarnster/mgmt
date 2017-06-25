@@ -51,6 +51,18 @@ const projects = (state = {}, action) => {
 
       return newProjectsState
 
+    case 'DELETE_ALL_PROJECTS_WITH_CLIENT':
+      let newProjectsWithoutClientState = Object.assign({}, ...Object.keys(state).map(k => (
+        (state[k].clientId === action.payload.clientId ? null : {[k]: state[k]}))
+      ));
+
+      console.log(newProjectsWithoutClientState)
+
+      ls = new localStorageHelper()
+      ls.putProjects(newProjectsWithoutClientState)
+
+      return newProjectsWithoutClientState
+
     default:
       return state
   }
