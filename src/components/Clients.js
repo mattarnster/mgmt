@@ -101,6 +101,7 @@ class Clients extends PureComponent {
 
 
   render() {
+    console.log(this.props.clients)
     return (
       <section className="card">
         <header>
@@ -109,7 +110,7 @@ class Clients extends PureComponent {
         </header>
         <div className="card-body">
 
-          {this.props.clients.length > 0 ? <List data={ this.props.clients } edit={ (itemKey) => this.edit(itemKey) } delete={ (itemKey) => this.delete(itemKey) } sPath="/"/> : <NoData displayText="You don't seem to have any clients. Why not add one?" add={ this.addClient } /> }
+          {Object.keys(this.props.clients).length > 0 ? <List data={ this.props.clients } edit={ (itemKey) => this.edit(itemKey) } delete={ (itemKey) => this.delete(itemKey) } sPath="/"/> : <NoData displayText="You don't seem to have any clients. Why not add one?" add={ this.addClient } /> }
 
         </div>
       </section>
