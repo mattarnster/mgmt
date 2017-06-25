@@ -1,129 +1,84 @@
 header.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 25px;
-  color: $white;
-  height: 80px;
-  width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 25px;
+color: $white;
+height: 80px;
+width: 100%;
 
-  span.icon-cog {
-    font-size: 25px;
-  }
-
-  svg {
-    width: 25px;
-    height: 25px;
-    fill: #fff;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  #clock #hour,
-  #clock #min {
-    transition: ease all .5s;
-    transform-origin: center;
-  }
-
-  #clock #min {
-    transform: rotate(var(--min));
-  }
-
-  #clock #hour {
-    transform: rotate(var(--hour));
-
-  }
-
-  .settings-container {
-    transition: .3s all ease;
-  }
-
-  .settings-container:hover {
-    transform: rotate(90deg);
-  }
-
-  span.logo-letter {
-    font-size: 25px;
-    margin-left: 10px;
-    position: relative;
-    font-weight: 100;
-    opacity: 0;
-    left: 10px;
-    transition: .3s all ease;
-    pointer-events: none;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  span.logo-letter.one {
-    transition: .3s all ease;
-  }
-
-  span.logo-letter.two {
-    transition: .3s .1s all ease;
-  }
-
-  span.logo-letter.three {
-    transition: .3s .2s all ease;
-  }
-
-  span.logo-letter.four {
-    transition: .3s .3s all ease;
-  }
-
-  .logo-container:hover {
-    span.logo-letter {
-      opacity: 1;
-      left: 0;
-    }
-  }
-
-  .search-container form {
-    input {
-      background-color: transparent;
-      border: none;
-      color: $white;
-      font-size: 18px;
-      font-weight: 100;
-      position: relative;
-      top: -3px;
-
-      &::placeholder {
-        color: $white;
-      }
-    }
-
-    button {
-      font-size: 25px;
-      background-color: transparent;
-      border: none;
-      color: $white;
-      cursor: pointer;
-    }
-  }
+span.icon-clock {
+font-size: 25px;
 }
 
-// settings
-div.settings-row {
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
+span.icon-cog {
+font-size: 25px;
+}
 
-  label {
-    display: flex;
-    justify-content: space-between;
+.settings-container {
+transition: .3s all ease;
+}
 
-    input[type="number"] {
-      width: 50px;
-      border: none;
-      text-align: right;
-      font-size: 18px;
-      appearence: text;
-    }
+.settings-container:hover {
+transform: rotate(90deg);
+}
 
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-      appearence: none;
-      display: none;
-    }
-  }
+span.logo-letter {
+font-size: 25px;
+margin-left: 10px;
+position: relative;
+top: -1px;
+font-weight: 100;
+opacity: 0;
+left: 10px;
+transition: .3s all ease;
+pointer-events: none;
+}
+
+span.logo-letter.one {
+transition: .3s all ease;
+}
+
+span.logo-letter.two {
+transition: .3s .1s all ease;
+}
+
+span.logo-letter.three {
+transition: .3s .2s all ease;
+}
+
+span.logo-letter.four {
+transition: .3s .3s all ease;
+}
+
+.logo-container:hover {
+span.logo-letter {
+opacity: 1;
+left: 0;
+}
+}
+
+.search-container form {
+input {
+background-color: transparent;
+border: none;
+color: $white;
+font-size: 18px;
+font-weight: 100;
+position: relative;
+top: -3px;
+
+&::placeholder {
+color: $white;
+}
+}
+
+button {
+font-size: 25px;
+background-color: transparent;
+border: none;
+color: $white;
+cursor: pointer;
+}
+}
 }
