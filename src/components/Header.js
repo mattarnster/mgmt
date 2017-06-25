@@ -49,7 +49,7 @@ class Header extends PureComponent {
       '<div class="settings-row"><p><span>Disco Mode</span></p> <input id="disco" class="styled-checkbox" type="checkbox" ' + (disco_status === true ? 'checked' : '') + '><label for="disco"></label></div>' +
       '<div class="settings-row"><p><span>Alerts</span> </p><input id="alerts" class="styled-checkbox"  type="checkbox" ' + (al_status === true ? 'checked' : '' ) + '/><label for="alerts"></label></div>' +
       '<div class="settings-row"><p><span>Alert Periods <small>(mins)</small></span></p> <input id="alert_periods" min="1" step="1"   type="number" value="' + alp_status + '" /></div>' +
-      '<div class="settings-row"><p><a href="https://www.reactriot.com/entries/227-moonunit/vote" target="_blank" rel="noopener">Vote for MGMT for ReactRiot 2017!</a></p></div>',
+      '<div class="settings-row"><p><a href="https://www.reactriot.com/entries/227-moonunit/vote" target="_blank" rel="noopener">Vote for us in ReactRiot 2017!</a></p></div>',
       width:400,
       padding:50,
       showCancelButton: true,
