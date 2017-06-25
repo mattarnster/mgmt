@@ -4,7 +4,7 @@ import List from './List'
 import { connect } from 'react-redux'
 import { ProjectFilter } from '../selectors/ProjectFilter'
 
-import { addProject, editProject } from '../actions/actionCreators'
+import { addProject, editProject, deleteProject } from '../actions/actionCreators'
 
 
 
@@ -16,6 +16,7 @@ class Projects extends PureComponent {
 
     this.addProject = this.addProject.bind(this)
     this.edit = this.edit.bind(this)
+    this.delete = this.delete.bind(this)
 
     document.title = 'Projects';
   }
@@ -81,16 +82,34 @@ class Projects extends PureComponent {
     })
   }
 
+  delete(projectId) {
+    var that = this
+
+    window.swal({
+      title: 'Delete project',
+      'text': 'Are you sure?',
+      showCancelButton: true,
+      confirmButtonColor: 'transparent',
+      cancelButtonColor: 'transparent',
+      showLoaderOnConfirm: false,
+      confirmButtonText: '<i class="icon icon-check-circle"></i>',
+      cancelButtonText: '<i class="icon icon-times-circle"></i>',
+      allowOutsideClick: false
+    }).then(function () {
+      that.props.dispatch(deleteProject(projectId))
+    })
+  }
+
   render() {
     return (
       <section className="card">
         <header>
           <h1>Projects</h1>
-          <button onClick={ this.addProject }>+</button>
+          <button onClick={ this.addProject } className="icon-plus"></button>
         </header>
         <div className="card-body">
 
-          <List data={ this.props.projects } edit={ this.edit } sPath={this.props.match.url+"/"}/>
+          <List data={ this.props.projects } edit={ this.edit } delete={ this.delete } sPath={this.props.match.url+"/"}/>
 
         </div>
       </section>
