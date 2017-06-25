@@ -29,7 +29,12 @@
     }
   }
 }
-
+body.dark .card.timer .card-body h1.timer {
+  color: rgba(#fff,0.6);
+}
+body.dark .card.timer .card-body button {
+  color: rgba(#fff,0.6);
+}
 .card.timer .card-body {
   text-align: center;
 }

@@ -7,9 +7,10 @@ $white: #FFF;
   --swaltext: #222;
 }
 body.dark {
-  --card: #000;
-  --text: #222222;
-  --border: rgba(#222,0.15);
+  --card: rgba(#000,0.25);
+  --text: rgba(#fff,0.6);
+  --border: rgba(#544984,0.6);
+  --swaltext: #fff;
 }
 
 

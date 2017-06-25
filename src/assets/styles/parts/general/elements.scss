@@ -55,5 +55,22 @@ body.swal2-shown {
   .swal2-cancel.swal2-styled:hover:before {
     opacity: 1;
   }
+}
 
+/* DARK */
+body.dark {
+  .swal2-container.swal2-shown {
+    background-color: rgba(#222,0.5);
+  }
+  .swal2-modal.swal2-show {
+    background-color: var(--card) !important;
+  }
+  .swal2-title {
+    color: rgba(#fff,0.6);
+    border-bottom: 1px solid rgba(#544984,1);
+  }
+  .swal2-cancel.swal2-styled:hover:before,
+  .swal2-confirm.swal2-styled:hover:before {
+    opacity: 0.6;
+  }
 }

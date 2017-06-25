@@ -170,6 +170,15 @@ body {
   min-height: 100vh;
 }
 
+body.dark #root {
+  background: rgba(#000,0.47);
+}
+
 .header + div {
   padding-bottom: 25px;
 }
+
+
+
+
+/*  DARK  */

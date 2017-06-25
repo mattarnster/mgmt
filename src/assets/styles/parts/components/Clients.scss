@@ -16,7 +16,18 @@
   box-shadow: 3px 3px 20px -3px rgba(0,0,0,0.25);
   padding: 50px;
 }
-
+body.dark .card header {
+  border-bottom: 1px solid rgba(#544984,1);
+}
+body.dark .card header h1 {
+  color: rgba(#fff,0.6);
+}
+body.dark .card header button {
+  color: rgba(#fff,0.3);
+}
+body.dark .card header button:hover {
+  color: rgba(#fff,0.6);
+}
 .card header {
   font-size: 26.52px;
   font-weight: 100;
@@ -44,9 +55,12 @@
 }
 
 .card .card-body {
-  padding: 25px 0 0;
+  padding: 0px 0 0;
+  height: 95%;
+  overflow-y: scroll;
 }
-
+.card .card-body .card-list {
+}
 .card .card-list .card-list-item > div {
   padding: 25px 0;
 }
