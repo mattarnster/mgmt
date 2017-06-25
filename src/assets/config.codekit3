@@ -63,16 +63,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/styles\/main.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/styles\/main-min.css",
-		"oF": 0,
-		"oS": 0
-		},
 	"\/styles\/main.css.map": {
 		"ft": 8192,
 		"oA": 2,
@@ -205,19 +195,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/styles\/parts\/general\/elements.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/styles\/parts\/general\/reset.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/styles\/parts\/general\/reset.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
