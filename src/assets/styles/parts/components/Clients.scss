@@ -205,11 +205,7 @@ section.card:nth-last-child(2) {
   }
 }
 
-section.card:nth-last-child(2):hover {
-  transform: translateX(-60%) scale(0.91);
-  opacity: 1;
-  mask: linear-gradient(to right, rgba(255,255,255,1) 10%,rgba(255,255,255,1) 100%);
-}
+
 
 section.card:nth-last-child(3) {
   transform: translateX(-120%);

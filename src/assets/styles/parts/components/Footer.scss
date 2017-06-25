@@ -93,3 +93,29 @@ body.dark {
     }
   }
 }
+a.vote-container {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  background-color: rgba(#fff,0.7);
+  border-radius: 5px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: 0.3s all ease;
+  p {
+    margin-bottom: 5px;
+    color: var(--text);
+    font-weight: 100;
+  }
+}
+a.vote-container:hover {
+  background-color: rgba(#fff,1);
+  transform: scale(1);
+}
+@media only screen and (max-width: 1070px) {
+  a.vote-container {
+    display: none;
+  }
+}

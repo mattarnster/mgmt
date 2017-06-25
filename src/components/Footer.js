@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
+import ReactRiotLogo from '../assets/images/reactriot.png'
 
 export default class Footer extends PureComponent {
   render() {
@@ -21,6 +22,10 @@ export default class Footer extends PureComponent {
             {params[1] && params[2] ? <Link to={"/"+params[1]+"/"+params[2]+"/logs" }><i className="icon-clipboard"></i>Logs</Link> : <span><i className="icon-clipboard"></i>Logs</span>}
           </li>
         </ul>
+        <a className="vote-container">
+          <p>Vote for us in</p>
+          <img src={ReactRiotLogo} alt="ReactRiot"/>
+        </a>
       </footer>
     )
   }
