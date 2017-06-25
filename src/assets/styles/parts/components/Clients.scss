@@ -23,12 +23,12 @@
   color: var(--text);
   font-weight: 100;
   color: #545454;
+
   p:first-child {
     font-size: 18px;
     margin-bottom: 15px;
   }
 }
-
 @media only screen and (max-height: 700px) {
   .main-panel {
     //height: calc(100vh - 810px);
@@ -81,26 +81,30 @@
   height: 95%;
   overflow-y: scroll;
   overflow-x: visible;
+
   &::-webkit-scrollbar {
     display: none;
-}
+  }
 }
 
 .card .card-body .card-list-item {
   position: relative;
 }
+
 .card .card-body .card-list-item button {
   padding-left: 10px;
 }
-.card .card-body .card-list-item button:hover + .item-menu,
-.card .card-body .card-list-item > .item-menu:hover {
+
+.card .card-body .card-list-item > .item-menu:hover,
+.card .card-body .card-list-item button:hover + .item-menu {
   display: block;
-  animation: fadein 0.3s forwards linear;
+  animation: fadein .3s forwards linear;
 }
 @keyframes fadein {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -110,11 +114,13 @@ body.dark {
   .card .card-body .card-list-item > .item-menu {
     color: #fff;
     background-color: rgba(#514580,0.85);
+
     a:hover {
       background-color: rgba(0,0,0,0.2);
     }
   }
 }
+
 .card .card-body .card-list-item > .item-menu {
   display: none;
   overflow: hidden;
@@ -128,27 +134,31 @@ body.dark {
   padding: 0;
   border-radius: 5px;
   box-shadow: 3px 3px 20px -3px rgba(0,0,0,0.25);
+
   a {
     background-color: transparent;
-    transition: 0.3s all ease;
+    transition: .3s all ease;
     display: block;
     padding: 15px 20px;
     cursor: pointer;
   }
+
   a:first-child {
     background-color: transparent;
-    transition: 0.3s all ease;
+    transition: .3s all ease;
     display: block;
     padding: 15px 20px;
     margin-top: -2px;
   }
+
   a:hover {
     background-color: rgba(0,0,0,0.03);
   }
 }
 
-
-
+.card .card-body .card-list-item:last-child > .item-menu {
+  top: -45px;
+}
 
 .card .card-list .card-list-item > div {
   padding: 25px 0;
@@ -205,8 +215,6 @@ section.card:nth-last-child(2) {
     pointer-events: none;
   }
 }
-
-
 
 section.card:nth-last-child(3) {
   transform: translateX(-120%);
