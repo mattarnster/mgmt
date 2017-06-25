@@ -83,7 +83,7 @@ class Clients extends PureComponent {
 
     window.swal({
       title: 'Delete client',
-      'text': 'Are you sure?',
+      'text': 'Are you sure? All of your client\'s projects will be deleted too.',
       showCancelButton: true,
       confirmButtonColor: 'transparent',
       cancelButtonColor: 'transparent',

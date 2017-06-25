@@ -42,6 +42,15 @@ const projects = (state = {}, action) => {
 
       return newProjectState
 
+    case 'DELETE_PROJECT':
+      let newProjectsState = {...state}
+      delete newProjectsState[action.payload.projectId]
+
+      ls = new localStorageHelper()
+      ls.putProjects(newProjectsState)
+
+      return newProjectsState
+
     default:
       return state
   }

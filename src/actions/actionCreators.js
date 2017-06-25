@@ -46,6 +46,15 @@ export function editProject(projectId, name) {
   }
 }
 
+export function deleteProject(projectId) {
+  return {
+    type: "DELETE_PROJECT",
+    payload: {
+      projectId
+    }
+  }
+}
+
 export function addTimeToProject(projectId, totalTime) {
   return {
     type: "ADD_TIME_TO_PROJECT",

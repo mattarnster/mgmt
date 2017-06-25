@@ -4,7 +4,7 @@ import List from './List'
 import { connect } from 'react-redux'
 import { ProjectFilter } from '../selectors/ProjectFilter'
 
-import { addProject, editProject } from '../actions/actionCreators'
+import { addProject, editProject, deleteProject } from '../actions/actionCreators'
 
 
 
@@ -16,6 +16,7 @@ class Projects extends PureComponent {
 
     this.addProject = this.addProject.bind(this)
     this.edit = this.edit.bind(this)
+    this.delete = this.delete.bind(this)
 
     document.title = 'Projects';
   }
@@ -82,33 +83,20 @@ class Projects extends PureComponent {
   }
 
   delete(projectId) {
-    var that = this;
+    var that = this
 
     window.swal({
       title: 'Delete project',
-      text: 'Are you sure you want to delete this project?',
-      inputValue: this.props.projects[projectId].name,
+      'text': 'Are you sure?',
       showCancelButton: true,
       confirmButtonColor: 'transparent',
       cancelButtonColor: 'transparent',
       showLoaderOnConfirm: false,
       confirmButtonText: '<i class="icon icon-check-circle"></i>',
       cancelButtonText: '<i class="icon icon-times-circle"></i>',
-      preConfirm: function (name) {
-        return new Promise(function (resolve, reject) {
-          if (name === that.props.projects[projectId].name) {
-            reject('Enter a different name or click cancel')
-          }
-          if (name === '') {
-            reject('Please enter a name')
-          } else {
-            resolve()
-          }
-        })
-      },
       allowOutsideClick: false
-    }).then(function (name) {
-      that.props.dispatch(editProject(projectId, name))
+    }).then(function () {
+      that.props.dispatch(deleteProject(projectId))
     })
   }
 
@@ -121,7 +109,7 @@ class Projects extends PureComponent {
         </header>
         <div className="card-body">
 
-          <List data={ this.props.projects } edit={ this.edit } sPath={this.props.match.url+"/"}/>
+          <List data={ this.props.projects } edit={ this.edit } delete={ this.delete } sPath={this.props.match.url+"/"}/>
 
         </div>
       </section>
