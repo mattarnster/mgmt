@@ -32,13 +32,7 @@ export function showReminderNotification() {
 
     if (result === 'granted') {
 
-      var notes = [];
-          notes[] = 'Go make yourself a drink';
-          notes[] = 'Good job go stretch your legs';
-          notes[] = 'Time for some food';
-          notes[] = 'Hey look a window it nicer than your sreen go look.';
-
-
+      var notes = ['Go make yourself a drink','Good job go stretch your legs','Time for some food','Hey look a window it\'s nicer than your srceen go look.']
 
       navigator.serviceWorker.ready.then(function(registration) {
         registration.showNotification(notes[Math.floor(Math.random() * 4)], {
