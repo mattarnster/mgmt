@@ -13,7 +13,7 @@ class Header extends PureComponent {
 
   componentDidMount() {
     if (this.props.settings[0] === true) {
-      document.body.className += ' ' + 'dark'
+      document.body.classList.add("dark");
     }
   }
 
@@ -22,8 +22,6 @@ class Header extends PureComponent {
     let dm_status = this.props.settings[0]
     let al_status = this.props.settings[1]
     let alp_status = this.props.settings[2]
-
-    console.log(dm_status)
 
     window.swal({
       title: 'Settings',
@@ -54,7 +52,12 @@ class Header extends PureComponent {
       allowOutsideClick: false
     }).then(function (result) {
       //window.swal(JSON.stringify(result))
-      console.log(result)
+      if (result[0] === true) {
+        document.body.classList.add("dark");
+      } else {
+        document.body.classList.remove("dark");
+      }
+
       that.props.dispatch(saveSettings(result))
     }).catch(window.swal.noop)
   }

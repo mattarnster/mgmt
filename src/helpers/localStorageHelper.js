@@ -78,7 +78,7 @@ export default class localStorageHelper {
     }
 
     putSettings(settings) {
-      let newSettings = JSON.stringify(newSettings)
+      let newSettings = JSON.stringify(settings)
       window.localStorage.setItem('settings', newSettings)
     }
 }
