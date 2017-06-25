@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { addTimeToProject, processLog } from '../actions/actionCreators'
 
 
+
 class Timer extends Component {
 
   constructor(props) {
@@ -24,6 +25,33 @@ class Timer extends Component {
 
   }
 
+  componentDidMount() {
+
+      this.unblock = this.props.history.block((nextLocation)=>{
+
+          if(!this.state.ticking) {
+            return true
+          }
+
+          this.pause();
+
+          let whatdo = window.confirm('are you sure');
+
+          if(whatdo) {
+            return true;
+          }
+
+          this.play();
+          return false;
+
+    })
+
+  }
+
+  componentWillUnmount() {
+    this.unblock();
+  }
+
   getTimer(){
     let time = new Date(this.state.roughTime * 1000).toISOString().substr(11, 8)
     document.title = time
@@ -31,22 +59,23 @@ class Timer extends Component {
   }
 
   play(){
-      let that = this;
-      let ticking = setInterval(function(){
+    let that = this;
+    let ticking = setInterval(function(){
 
-        let time = that.state.roughTime
-        time++
-        that.setState({
-          roughTime:time
-        })
-
-      },1000);
-
-
-      this.setState({
-        ticking:ticking,
-        startTime:  Date.now()
+      let time = that.state.roughTime
+      time++
+      that.setState({
+        roughTime:time
       })
+      that.props.dispatch(addTimeToProject(that.props.match.params.projectId, that.state.roughTime))
+
+    },1000);
+
+
+    this.setState({
+      ticking:ticking,
+      startTime:  Date.now()
+    })
   }
 
   pause(){
