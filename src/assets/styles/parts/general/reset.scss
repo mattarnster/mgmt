@@ -170,6 +170,10 @@ body {
   min-height: 100vh;
 }
 
+body.disco #root {
+  animation: backgroundAnimation 2s ease infinite;
+}
+
 body.no-anim #root {
   background: linear-gradient(146deg, rgba(100,110,182,0.75), rgba(112,100,163,0.67));
   animation: none;
@@ -185,5 +189,5 @@ body.dark #root {
 
 
 button {
-  outline: none;
+  outline: none !important;
 }
