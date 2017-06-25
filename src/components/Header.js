@@ -19,12 +19,18 @@ class Header extends PureComponent {
 
   showSettingsModal() {
     var that = this
+    let dm_status = this.props.settings[0]
+    let al_status = this.props.settings[1]
+    let alp_status = this.props.settings[2]
+
+    console.log(dm_status)
+
     window.swal({
       title: 'Settings',
       html:
-      '<div><label for="dark_mode">Dark mode <input id="dark_mode" type="checkbox"/></label></div>' +
-      '<div><label for="alerts">Alerts <input id="alerts" type="checkbox" /></label></div>' +
-      '<div><label for="alert_periods">Alert periods (mins)<input id="alert_periods" type="text" /></label></div>' +
+      '<div><label for="dark_mode">Dark mode <input id="dark_mode" type="checkbox" ' + (dm_status === true ? 'checked' : '') + '></label></div>' +
+      '<div><label for="alerts">Alerts <input id="alerts" type="checkbox" ' + (al_status === true ? 'checked' : '' ) + '/></label></div>' +
+      '<div><label for="alert_periods">Alert periods (mins)<input id="alert_periods" type="text" value="' + alp_status + '" /></label></div>' +
       '<div><button>Export JSON</button></div>' +
       '<div><span>Import JSON</span></div>' +
       '<div><input id="import" type="text" /></div>',
@@ -38,8 +44,8 @@ class Header extends PureComponent {
             reject("You need to specify an alert period.")
           }
           resolve([
-            document.getElementById('dark_mode').value,
-            document.getElementById('alerts').value,
+            document.getElementById('dark_mode').checked,
+            document.getElementById('alerts').checked,
             document.getElementById('alert_periods').value,
             document.getElementById('import').value
           ])
@@ -48,6 +54,7 @@ class Header extends PureComponent {
       allowOutsideClick: false
     }).then(function (result) {
       //window.swal(JSON.stringify(result))
+      console.log(result)
       that.props.dispatch(saveSettings(result))
     }).catch(window.swal.noop)
   }

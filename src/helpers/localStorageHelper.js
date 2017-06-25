@@ -20,6 +20,11 @@ export default class localStorageHelper {
       if (window.localStorage.getItem('logs') === null) {
         window.localStorage.setItem('logs', JSON.stringify(logData))
       }
+      if (window.localStorage.getItem('settings') === null) {
+        window.localStorage.setItem('settings', JSON.stringify([
+          true, true, '10', ''
+        ]))
+      }
     }
 
 
@@ -62,4 +67,18 @@ export default class localStorageHelper {
       window.localStorage.setItem('logs', newLogs)
     }
     deleteLog() {}
+
+    /**
+     * Settings
+     */
+
+    getSettings() {
+      let settings = JSON.parse(window.localStorage.getItem('settings'))
+      return settings
+    }
+
+    putSettings(settings) {
+      let newSettings = JSON.stringify(newSettings)
+      window.localStorage.setItem('settings', newSettings)
+    }
 }
