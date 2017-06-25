@@ -50,7 +50,6 @@ const logs = (state = {}, action) => {
 
         return newLogsWithoutProject
 
-
     default:
       return state
   }
