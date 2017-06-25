@@ -7,6 +7,16 @@ export function addClient(clientName) {
   }
 }
 
+export function editClient(clientId, name) {
+  return {
+    type: "EDIT_CLIENT",
+    payload: {
+      clientId,
+      name
+    }
+  }
+}
+
 export function addProject(projectName, clientId) {
   return {
     type: "ADD_PROJECT",

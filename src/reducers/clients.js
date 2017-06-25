@@ -16,6 +16,18 @@ const clients = (state = {}, action) => {
       ls.putClients(newClients)
       return newClients
 
+    case 'EDIT_CLIENT':
+      // clientId, name
+      let existingClient = state[action.payload.clientId]
+      existingClient.name = action.payload.name
+
+      let newState = Object.assign({}, state, { [action.payload.clientId]: existingClient })
+
+      ls = new localStorageHelper()
+      ls.putClients(newState)
+
+      return newState
+
     default:
       return state
   }

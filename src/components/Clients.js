@@ -2,13 +2,16 @@ import React, { PureComponent } from 'react'
 import List from './List'
 
 import { connect } from 'react-redux'
-import { addClient } from '../actions/actionCreators'
+import { addClient, editClient } from '../actions/actionCreators'
 
 class Clients extends PureComponent {
 
   constructor() {
     super()
+
     this.addClient = this.addClient.bind(this)
+    this.edit = this.edit.bind(this)
+
     document.title = "Clients"
   }
 
@@ -19,6 +22,7 @@ class Clients extends PureComponent {
       title: 'Add New Client',
       text:'Name your client',
       input: 'text',
+      customClass: 'sweet-warning',
       showCancelButton: true,
       confirmButtonColor: 'transparent',
       cancelButtonColor: 'transparent',
@@ -37,9 +41,40 @@ class Clients extends PureComponent {
       },
       allowOutsideClick: false
     }).then(function (name) {
-      that.props.dispatch(addClient(name))
+      that.props.dispatch(editClient(name))
     })
 
+  }
+
+  edit(clientId) {
+    var that = this;
+
+    window.swal({
+      title: 'Edit client: ' + this.props.clients[clientId].name,
+      input: 'text',
+      inputValue: this.props.clients[clientId].name,
+      showCancelButton: true,
+      confirmButtonColor: 'transparent',
+      cancelButtonColor: 'transparent',
+      showLoaderOnConfirm: false,
+      confirmButtonText: '<i class="icon icon-check-circle"></i>',
+      cancelButtonText: '<i class="icon icon-times-circle"></i>',
+      preConfirm: function (name) {
+        return new Promise(function (resolve, reject) {
+          if (name === that.props.clients[clientId].name) {
+            reject('Enter a different name or click cancel')
+          }
+          if (name === '') {
+            reject('Please enter a name')
+          } else {
+            resolve()
+          }
+        })
+      },
+      allowOutsideClick: false
+    }).then(function (name) {
+      that.props.dispatch(editClient(clientId, name))
+    })
   }
 
   render() {
@@ -51,7 +86,7 @@ class Clients extends PureComponent {
         </header>
         <div className="card-body">
 
-          <List data={ this.props.clients }  sPath="/"/>
+          <List data={ this.props.clients } edit={ this.edit } sPath="/"/>
 
         </div>
       </section>
