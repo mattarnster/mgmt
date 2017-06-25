@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 
 import { dismissSplash } from '../actions/actionCreators'
 
-import SplashLogo from '../assets/images/splash-logo.svg'
-
 class Splash extends PureComponent {
 
   constructor() {

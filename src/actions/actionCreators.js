@@ -111,7 +111,6 @@ export function changeLogFilterDuration(duration) {
 }
 
 export function saveSettings(settings) {
-  console.log(settings)
   return {
     type: "SAVE_SETTINGS",
     payload: {
