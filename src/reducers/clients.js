@@ -28,6 +28,16 @@ const clients = (state = {}, action) => {
 
       return newState
 
+    case 'DELETE_CLIENT':
+      let newClientState = {...state}
+      delete newClientState[action.payload.clientId]
+
+      ls = new localStorageHelper()
+      ls.putClients(newClientState)
+
+      return newClientState
+
+
     default:
       return state
   }
