@@ -1,11 +1,21 @@
-body > #root > div {
-
-  header,
-  div:last-child {
+body > #root > div > header {
     opacity: 1;
     transition: 1s all ease;
-  }
 }
+
+body > #root > div > div:last-child {
+    opacity: 1;
+    transition: 1s all ease;
+}
+
+body.splash-visible > #root > div > header {
+    opacity: 0;
+}
+
+body.splash-visible > #root > div > div:last-child {
+    opacity: 0;
+}
+
 body.splash-visible > #root > div {
   .splash-container {
     opacity: 0;
@@ -112,9 +122,5 @@ body.splash-visible > #root > div {
         opacity: 1;
       }
     }
-  }
-  header,
-  div:last-child {
-    opacity: 0;
   }
 }

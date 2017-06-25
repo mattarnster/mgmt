@@ -47,9 +47,38 @@
   padding: 0;
   height: 95%;
   overflow-y: scroll;
+  overflow-x: visible;
 }
-
-.card .card-body .card-list {}
+.card .card-body .card-list-item {
+  position: relative;
+}
+.card .card-body .card-list-item > div:last-child {
+  position: absolute;
+  z-index: 999;
+right: 29px;
+top: 25px;
+color: #fff;
+background-color: rgba(#514580,0.85);
+width: 120px;
+padding: 0;
+border-radius: 5px;
+box-shadow: 3px 3px 20px -3px rgba(0,0,0,0.25);
+  a {
+    background-color: transparent;
+    transition: 0.3s all ease;
+    display: block;
+    padding: 15px 20px;
+  }
+  a:first-child {
+    background-color: transparent;
+    transition: 0.3s all ease;
+    display: block;
+    padding: 15px 20px;
+  }
+  a:hover {
+    background-color: rgba(0,0,0,0.2);
+  }
+}
 
 .card .card-list .card-list-item > div {
   padding: 25px 0;
