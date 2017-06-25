@@ -86,7 +86,7 @@ class Projects extends PureComponent {
       <section className="card">
         <header>
           <h1>Projects</h1>
-          <button onClick={ this.addProject }>+</button>
+          <button onClick={ this.addProject } className="icon-plus"></button>
         </header>
         <div className="card-body">
 
