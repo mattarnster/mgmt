@@ -46,3 +46,37 @@ body.dark .card.timer .card-body button:hover {
     font-size: 55px;
   }
 }
+@media only screen and (max-width: 880px) and (max-height: 600px) and (orientation: landscape) {
+
+
+  body.dark .card.timer {
+    background-image: url('../images/poly.png');
+  }
+  .card.timer {
+    background: linear-gradient(146deg, rgba(100,110,182,1), rgba(112,100,163,1));
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    top: 0;
+    height: 100vh;
+    max-width: 100%;
+    left: 0;
+    transform: none;
+    header {
+      display: none;
+    }
+    .card-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h1.timer {
+        color: #fff;
+      }
+      button {
+        color: #fff;
+      }
+    }
+  }
+
+}
