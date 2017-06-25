@@ -36,10 +36,10 @@ class Header extends PureComponent {
     window.swal({
       title: 'Settings',
       html:
-      '<div class="settings-row"><p><span>Dark mode</span></p> <input id="dark_mode" class="styled-checkbox" type="checkbox" ' + (dm_status === true ? 'checked' : '') + '><label for="dark_mode"></label></div>' +
-      '<div class="settings-row"><p><span>Disable Background animation</span></p> <input id="dis_anim" class="styled-checkbox" type="checkbox" ' + (anim_status === true ? 'checked' : '') + '><label for="dis_anim"></label></div>' +
+      '<div class="settings-row"><p><span>Dark Mode</span></p> <input id="dark_mode" class="styled-checkbox" type="checkbox" ' + (dm_status === true ? 'checked' : '') + '><label for="dark_mode"></label></div>' +
+      '<div class="settings-row"><p><span>Disable Background Animation</span></p> <input id="dis_anim" class="styled-checkbox" type="checkbox" ' + (anim_status === true ? 'checked' : '') + '><label for="dis_anim"></label></div>' +
       '<div class="settings-row"><p><span>Alerts</span> </p><input id="alerts" class="styled-checkbox" type="checkbox" ' + (al_status === true ? 'checked' : '' ) + '/><label for="alerts"></label></div>' +
-      '<div class="settings-row"><p><span>Alert periods <small>(mins)</small></span></p> <input id="alert_periods"  type="number" value="' + alp_status + '" /></div>',
+      '<div class="settings-row"><p><span>Alert Periods <small>(mins)</small></span></p> <input id="alert_periods"  type="number" value="' + alp_status + '" /></div>',
       width:400,
       padding:50,
       showCancelButton: true,

@@ -39,9 +39,9 @@ class Timer extends Component {
       var that = this;
 
       var alert = window.swal({
-        title: 'Are you sure?',
-        text: "Leaving now will pause your timer",
-        type: 'warning',
+        title: 'Wait a minute!',
+        text: "It looks like you're trying to go back. The Timer will need to be paused before you can proceed, are you sure you want to continue?",
+        imageUrl: '/warning.png',
         customClass: 'sweet-warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
