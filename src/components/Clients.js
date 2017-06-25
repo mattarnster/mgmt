@@ -22,7 +22,6 @@ class Clients extends PureComponent {
       title: 'Add New Client',
       text:'Name your client',
       input: 'text',
-      customClass: 'sweet-warning',
       showCancelButton: true,
       confirmButtonColor: 'transparent',
       cancelButtonColor: 'transparent',

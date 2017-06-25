@@ -42,6 +42,7 @@ class Timer extends Component {
         title: 'Are you sure?',
         text: "Leaving now will pause your timer",
         type: 'warning',
+        customClass: 'sweet-warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
