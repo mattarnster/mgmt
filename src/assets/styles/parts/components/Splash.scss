@@ -1,0 +1,114 @@
+body > #root > div {
+
+  header,
+  div:last-child {
+    opacity: 1;
+    transition: 1s all ease;
+  }
+}
+body.splash-visible > #root > div {
+  .splash-container {
+    opacity: 0;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s ease;
+    animation: fadeinopacity 1s forwards linear;
+    h3 {
+      margin-left: 6px;
+      font-size: 25px;
+      letter-spacing: 10px;
+      color: #fff;
+      font-weight: 100;
+      span {
+        position: relative;
+        opacity: 0;
+      }
+      span:first-child {
+        animation: letterone 0.6s forwards linear;
+      }
+      @keyframes letterone {
+        0% {
+          opacity: 0;
+          right: -10px;
+        }
+        100% {
+          opacity: 1;
+          right: 0;
+        }
+      }
+      span:nth-child(2) {
+        animation: lettertwo 0.6s 0.2s forwards linear;
+      }
+      @keyframes lettertwo {
+        0% {
+          opacity: 0;
+          right: -10px;
+        }
+        100% {
+          opacity: 1;
+          right: 0;
+        }
+      }
+      span:nth-child(3) {
+        animation: letterthree 0.6s 0.4s forwards linear;
+      }
+      @keyframes letterthree {
+        0% {
+          opacity: 0;
+          right: -10px;
+        }
+        100% {
+          opacity: 1;
+          right: 0;
+        }
+      }
+      span:last-child {
+        animation: letterfour 0.6s 0.6s forwards linear;
+      }
+      @keyframes letterfour {
+        0% {
+          opacity: 0;
+          right: -10px;
+        }
+        100% {
+          opacity: 1;
+          right: 0;
+        }
+      }
+    }
+    img {
+      height: 90px;
+      width: 90px;
+      margin-bottom: 20px;
+      animation: spinner 2s infinite linear;
+    }
+    @keyframes spinner {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+      }
+    }
+    @keyframes fadeinopacity {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  header,
+  div:last-child {
+    opacity: 0;
+  }
+}
