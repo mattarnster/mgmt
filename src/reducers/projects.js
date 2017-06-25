@@ -56,7 +56,6 @@ const projects = (state = {}, action) => {
         (state[k].clientId === action.payload.clientId ? null : {[k]: state[k]}))
       ));
 
-      console.log(newProjectsWithoutClientState)
 
       ls = new localStorageHelper()
       ls.putProjects(newProjectsWithoutClientState)
