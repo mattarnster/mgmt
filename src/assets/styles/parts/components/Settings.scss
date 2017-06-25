@@ -30,3 +30,10 @@ body.dark {
     font-weight: 100;
   }
 }
+.settings-row:last-child p {
+  text-align: center;
+  margin: auto;
+  a {
+    color: #514580;
+  }
+}
