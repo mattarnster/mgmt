@@ -28,7 +28,6 @@ class Timer extends Component {
 
   componentDidMount() {
 
-
     this.unblock = this.props.history.block((nextLocation)=>{
 
       if(!this.state.ticking) {
@@ -73,7 +72,7 @@ class Timer extends Component {
 
   getTimer(){
     let time = new Date(this.state.roughTime * 1000).toISOString().substr(11, 8)
-    document.title = time
+
     return time
   }
 
@@ -90,7 +89,7 @@ class Timer extends Component {
         roughTime:time
       })
       that.props.dispatch(addTimeToProject(that.props.match.params.projectId, that.state.roughTime))
-
+      document.title = that.getTimer()
 
       if(that.props.settings[2] && that.props.settings[1]) {
 
@@ -114,7 +113,7 @@ class Timer extends Component {
   }
 
   pause(){
-
+    document.title = 'MGMT'
     let ticking = this.state.ticking
     clearInterval(ticking)
 

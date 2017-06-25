@@ -2,12 +2,16 @@ export function register() {
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
-
+    showAlertConfirm();
   }
 
 }
 
 export function showAlertConfirm() {
+
+  if(Notification.permission === 'granted'){
+    return;
+  }
 
   Notification.requestPermission(function(result) {
 

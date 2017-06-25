@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 
 import { saveSettings } from '../actions/actionCreators'
-import { register,showAlertConfirm } from '../helpers/webNotifications.js'
+import { register } from '../helpers/webNotifications.js'
 import  Logo  from './Logo.js'
 
 
@@ -82,7 +82,6 @@ class Header extends PureComponent {
 
       if(result[1] === true && al_status !== result[1]) {
         register();
-        showAlertConfirm();
       }
 
       that.props.dispatch(saveSettings(result))

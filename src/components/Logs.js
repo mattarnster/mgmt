@@ -12,7 +12,6 @@ class Logs extends PureComponent {
     super()
 
     this.setFilter = this.setFilter.bind(this)
-    document.title = 'Logs';
   }
 
   componentDidMount() {

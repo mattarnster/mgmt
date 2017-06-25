@@ -12,9 +12,8 @@ class Clients extends PureComponent {
     this.addClient = this.addClient.bind(this)
     this.edit = this.edit.bind(this)
     this.delete = this.delete.bind(this)
-
-    document.title = "Clients"
   }
+
 
   addClient() {
     var that = this;
@@ -47,8 +46,6 @@ class Clients extends PureComponent {
 
   edit(clientId) {
     var that = this;
-
-    console.log(clientId)
 
     window.swal({
       title: 'Edit client',

@@ -18,7 +18,6 @@ class Projects extends PureComponent {
     this.edit = this.edit.bind(this)
     this.delete = this.delete.bind(this)
 
-    document.title = 'Projects';
   }
 
 
