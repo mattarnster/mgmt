@@ -10,7 +10,7 @@ export default class List extends PureComponent {
 
   renderListItems() {
     return Object.keys(this.props.data).map((key) => {
-      return <ListItem  data={this.props.data[key]} key={key} itemKey={key} sPath={this.props.sPath ? this.props.sPath : false} edit={ this.props.edit } />
+      return <ListItem  data={this.props.data[key]} key={key} itemKey={key} sPath={this.props.sPath ? this.props.sPath : false} edit={ (itemKey) => this.props.edit(itemKey) } delete={ (e, itemKey) => this.props.delete(itemKey) } />
     })
   }
   noData() {

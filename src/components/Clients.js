@@ -47,6 +47,8 @@ class Clients extends PureComponent {
   edit(clientId) {
     var that = this;
 
+    console.log(clientId)
+
     window.swal({
       title: 'Edit client',
       input: 'text',
@@ -84,7 +86,7 @@ class Clients extends PureComponent {
         </header>
         <div className="card-body">
 
-          <List data={ this.props.clients } edit={ this.edit } sPath="/"/>
+          <List data={ this.props.clients } edit={ (itemKey) => this.edit(itemKey) } sPath="/"/>
 
         </div>
       </section>
