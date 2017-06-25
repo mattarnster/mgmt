@@ -33,8 +33,12 @@ class Header extends PureComponent {
       '<div><span>Import JSON</span></div>' +
       '<div><input id="import" type="text" /></div>',
       showCancelButton: true,
-      confirmButtonText: 'Submit',
-      showLoaderOnConfirm: true,
+      confirmButtonColor: 'transparent',
+      cancelButtonColor: 'transparent',
+      confirmButtonText: '<i class="icon icon-check-circle"></i>',
+      cancelButtonText: '<i class="icon icon-times-circle"></i>',
+      showLoaderOnConfirm: false,
+      allowOutsideClick: false,
       preConfirm: function () {
         return new Promise(function (resolve, reject) {
           // Do validation here
@@ -49,7 +53,6 @@ class Header extends PureComponent {
           ])
         })
       },
-      allowOutsideClick: false
     }).then(function (result) {
       //window.swal(JSON.stringify(result))
       if (result[0] === true) {

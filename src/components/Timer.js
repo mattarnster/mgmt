@@ -40,12 +40,13 @@ class Timer extends Component {
 
       var alert = window.swal({
         title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        text: "Leaving now will pause your timer",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: '<i class="icon icon-check-circle"></i>',
+        cancelButtonText: '<i class="icon icon-times-circle"></i>'
       });
 
       alert.then(function(){
@@ -60,6 +61,7 @@ class Timer extends Component {
     })
 
   }
+
 
   componentWillUnmount() {
     this.unblock();

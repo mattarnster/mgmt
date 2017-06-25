@@ -2,9 +2,11 @@ body.swal2-shown {
   #root {
     filter: blur(25px);
   }
+
   .swal2-container.swal2-shown {
     background-color: rgba(#222,0.3);
   }
+
   .swal2-modal.swal2-show {
     padding: 50px !important;
     border-radius: 5px;
@@ -12,6 +14,7 @@ body.swal2-shown {
     background-color: var(--card);
     min-height: auto !important;
   }
+
   .swal2-title {
     font-family: 'Heebo';
     font-weight: 100;
@@ -22,37 +25,20 @@ body.swal2-shown {
     text-align: left;
     border-bottom: 1px solid var(--border);
   }
+
+  .swal2-cancel.swal2-styled,
   .swal2-confirm.swal2-styled {
     padding: 0 !important;
     background-color: transparent !important;
-  }
-  .swal2-confirm.swal2-styled:before {
-    font-family: 'icomoon';
-    content: "\e90f";
-    color: var(--swaltext);
+    color: var(--text);
+    opacity: .6;
+    transition: ease all .5s;
     font-size: 35px;
-    padding: 0 20px !important;
-    opacity: 0.3;
-    transition: 0.3s all ease;
+    margin: 15px 30px 0;
+  }
 
-  }
-  .swal2-confirm.swal2-styled:hover:before {
-    opacity: 1;
-  }
-  .swal2-cancel.swal2-styled {
-    padding: 0 !important;
-    background-color: transparent !important;
-  }
-  .swal2-cancel.swal2-styled:before {
-    font-family: 'icomoon';
-    content: "\e90e";
-    color: var(--swaltext);
-    font-size: 35px;
-    padding: 0 20px !important;
-    opacity: 0.3;
-    transition: 0.3s all ease;
-  }
-  .swal2-cancel.swal2-styled:hover:before {
+  .swal2-cancel.swal2-styled:hover,
+  .swal2-confirm.swal2-styled:hover {
     opacity: 1;
   }
 }
@@ -62,15 +48,18 @@ body.dark {
   .swal2-container.swal2-shown {
     background-color: rgba(#222,0.5);
   }
+
   .swal2-modal.swal2-show {
     background-color: var(--card) !important;
   }
+
   .swal2-title {
     color: rgba(#fff,0.6);
     border-bottom: 1px solid rgba(#544984,1);
   }
+
   .swal2-cancel.swal2-styled:hover:before,
   .swal2-confirm.swal2-styled:hover:before {
-    opacity: 0.6;
+    opacity: .6;
   }
 }
