@@ -10,7 +10,7 @@ const settings = (state = [], action) => {
       return action.payload.settings
 
     default:
-      return state
+      return action.payload.settings
   }
 }
 

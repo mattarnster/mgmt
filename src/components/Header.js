@@ -12,7 +12,7 @@ class Header extends PureComponent {
   }
 
   componentDidMount() {
-    if (this.props.settings[0] === 'on') {
+    if (this.props.settings[0] === true) {
       document.body.className += ' ' + 'dark-mode'
     }
   }
