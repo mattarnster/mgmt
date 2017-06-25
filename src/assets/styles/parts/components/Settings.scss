@@ -1,18 +1,32 @@
 .settings-row {
-p {
-display: inline-block;
-}
-input[type=checkbox] { display:none; } /* to hide the checkbox itself */
-input[type=checkbox] + label:before {
-font-family: icomoon;
-display: inline-block;
-position: relative;
-top: 2px;
+  font-family: 'Heebo';
+  color: var(--text);
+  p {
+    display: inline-block;
+  }
+  input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+  input[type=checkbox] + label:before {
+    font-family: icomoon;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+  }
+
+  input[type=checkbox] + label:before { content: "\e902"; } /* unchecked icon */
+  input[type=checkbox] + label:before { letter-spacing: 0px; } /* space between checkbox and label */
+
+  input[type=checkbox]:checked + label:before { content: "\e901"; } /* checked icon */
+  input[type=checkbox]:checked + label:before { letter-spacing: 0px; } /* allow space for check mark */
 }
 
-input[type=checkbox] + label:before { content: "\e902"; } /* unchecked icon */
-input[type=checkbox] + label:before { letter-spacing: 0px; } /* space between checkbox and label */
-
-input[type=checkbox]:checked + label:before { content: "\e901"; } /* checked icon */
-input[type=checkbox]:checked + label:before { letter-spacing: 0px; } /* allow space for check mark */
+body.dark {
+  .settings-row {
+    font-family: 'Heebo';
+    color: var(--text);
+  }
+  input[type="number"] {
+    background-color: transparent;
+    color: var(--text);
+    font-weight: 100;
+  }
 }

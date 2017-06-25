@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import List from './List'
+import NoData from './NoData'
 
 import { connect } from 'react-redux'
 import { ProjectFilter } from '../selectors/ProjectFilter'
@@ -108,7 +109,7 @@ class Projects extends PureComponent {
         </header>
         <div className="card-body">
 
-          <List data={ this.props.projects } edit={ this.edit } delete={ this.delete } sPath={this.props.match.url+"/"}/>
+          { Object.keys(this.props.projects).length > 0 ? <List data={ this.props.projects } edit={ this.edit } delete={ this.delete } sPath={this.props.match.url+"/"}/> : <NoData displayText="You've not got any projects, why not add one?" add={ this.addProject } /> }
 
         </div>
       </section>
