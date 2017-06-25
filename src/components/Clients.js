@@ -48,7 +48,7 @@ class Clients extends PureComponent {
     var that = this;
 
     window.swal({
-      title: 'Edit client: ' + this.props.clients[clientId].name,
+      title: 'Edit client',
       input: 'text',
       inputValue: this.props.clients[clientId].name,
       showCancelButton: true,
