@@ -14,8 +14,10 @@ class Splash extends PureComponent {
 
   componentDidMount() {
     var that = this
+    document.body.classList.add("splash-visible")
     setTimeout(function() {
       that.props.dispatch(dismissSplash())
+      document.body.classList.remove("splash-visible")
     }, 2000)
   }
 
