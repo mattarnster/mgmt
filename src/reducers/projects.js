@@ -30,6 +30,18 @@ const projects = (state = {}, action) => {
 
       return newState
 
+    case 'EDIT_PROJECT':
+      // projectId, name
+      let existingProject = state[action.payload.projectId]
+      existingProject.name = action.payload.name
+
+      let newProjectState = Object.assign({}, state, { [action.payload.projectId]: existingProject })
+
+      ls = new localStorageHelper()
+      ls.putProjects(newProjectState)
+
+      return newProjectState
+
     default:
       return state
   }
