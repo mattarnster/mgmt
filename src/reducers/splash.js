@@ -1,6 +1,3 @@
-import localStorageHelper from '../helpers/localStorageHelper'
-
-var ls = new localStorageHelper()
 
 const splash = (state = false, action) => {
   switch(action.type) {

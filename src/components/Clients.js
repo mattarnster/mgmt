@@ -39,7 +39,7 @@ class Clients extends PureComponent {
       },
       allowOutsideClick: false
     }).then(function (name) {
-      that.props.dispatch(editClient(name))
+      that.props.dispatch(addClient(name))
     })
 
   }
