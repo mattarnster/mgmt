@@ -72,6 +72,9 @@ transition: .3s .2s all ease;
 span.logo-letter.four {
 transition: .3s .3s all ease;
 }
+.logo-container a {
+  color: #fff;
+}
 
 .logo-container:hover {
 span.logo-letter {

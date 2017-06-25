@@ -5,7 +5,6 @@ import { ProjectFilter } from '../selectors/ProjectFilter'
 import { Link } from 'react-router-dom'
 
 import { addTimeToProject, processLog } from '../actions/actionCreators'
-import { showReminderNotification } from '../helpers/webNotifications.js'
 
 
 
@@ -40,7 +39,7 @@ class Timer extends Component {
       var that = this;
 
       var alert = window.swal({
-        title: 'Wait a minute!',
+        title: 'Wait a Minute!',
         text: "It looks like you're trying to go back. The Timer will need to be paused before you can proceed, are you sure you want to continue?",
         imageUrl: '/warning.png',
         customClass: 'sweet-warning',
@@ -70,17 +69,15 @@ class Timer extends Component {
   }
 
 
+
   getTimer(){
     let time = new Date(this.state.roughTime * 1000).toISOString().substr(11, 8)
-
+    document.title = time
     return time
   }
 
   play(){
     let that = this;
-
-    let startTime = Date.now()
-
     let ticking = setInterval(function(){
 
       let time = that.state.roughTime
@@ -89,19 +86,6 @@ class Timer extends Component {
         roughTime:time
       })
       that.props.dispatch(addTimeToProject(that.props.match.params.projectId, that.state.roughTime))
-      document.title = that.getTimer()
-
-      if(that.props.settings[2] && that.props.settings[1]) {
-
-          let runTime = Math.round((Date.now() - startTime) / 1000) / 60
-
-          if(runTime % that.props.settings[2] === 0) {
-            showReminderNotification();
-          }
-
-      }
-
-
 
     },1000);
 
@@ -113,7 +97,7 @@ class Timer extends Component {
   }
 
   pause(){
-    document.title = 'MGMT'
+
     let ticking = this.state.ticking
     clearInterval(ticking)
 
@@ -156,8 +140,7 @@ class Timer extends Component {
 
 const mapStateToProps = (state,props) => {
   return {
-    projects: ProjectFilter(state.projects,props.match.params.projectId,'key'),
-    settings: state.settings
+    projects: ProjectFilter(state.projects,props.match.params.projectId,'key')
   }
 }
 
