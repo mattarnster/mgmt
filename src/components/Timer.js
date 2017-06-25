@@ -27,22 +27,35 @@ class Timer extends Component {
 
   componentDidMount() {
 
-      this.unblock = this.props.history.block((nextLocation)=>{
+    this.unblock = this.props.history.block((nextLocation)=>{
 
-          if(!this.state.ticking) {
-            return true
-          }
+      if(!this.state.ticking) {
+        return true
+      }
 
-          this.pause();
+      this.pause();
 
-          let whatdo = window.confirm('are you sure');
+      var whatdo = nextLocation;
+      var that = this;
 
-          if(whatdo) {
-            return true;
-          }
+      var alert = window.swal({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      });
 
-          this.play();
-          return false;
+      alert.then(function(){
+        that.props.history.push(whatdo.pathname)
+
+      },function(nope){
+        that.play();
+      });
+
+      return false;
 
     })
 
@@ -51,6 +64,8 @@ class Timer extends Component {
   componentWillUnmount() {
     this.unblock();
   }
+
+
 
   getTimer(){
     let time = new Date(this.state.roughTime * 1000).toISOString().substr(11, 8)
@@ -100,7 +115,6 @@ class Timer extends Component {
 
     this.props.dispatch(addTimeToProject(this.props.match.params.projectId, finalTime))
     this.props.dispatch(processLog(runTime, this.props.match.params.projectId))
-
 
   }
 

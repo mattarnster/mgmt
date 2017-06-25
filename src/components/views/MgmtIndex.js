@@ -6,7 +6,6 @@ import Footer from '../Footer'
 import Header from '../Header'
 import Logs from '../Logs'
 import Projects from '../Projects'
-import Settings from '../Settings'
 import Timer from '../Timer'
 
 export default class MgmtIndex extends PureComponent {
