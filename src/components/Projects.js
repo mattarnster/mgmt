@@ -55,7 +55,7 @@ class Projects extends PureComponent {
     var that = this;
 
     window.swal({
-      title: 'Edit project',
+      title: 'Rename project',
       input: 'text',
       inputValue: this.props.projects[projectId].name,
       showCancelButton: true,
@@ -86,7 +86,7 @@ class Projects extends PureComponent {
     var that = this
 
     window.swal({
-      title: 'Delete project',
+      title: 'Delete Project',
       'text': 'Are you sure?',
       showCancelButton: true,
       confirmButtonColor: 'transparent',

@@ -49,7 +49,7 @@ class Clients extends PureComponent {
     var that = this;
 
     window.swal({
-      title: 'Edit client',
+      title: 'Rename client',
       input: 'text',
       inputValue: this.props.clients[clientId].name,
       showCancelButton: true,
@@ -80,7 +80,7 @@ class Clients extends PureComponent {
     var that = this
 
     window.swal({
-      title: 'Delete client',
+      title: 'Delete Client',
       'text': 'Are you sure? All projects for this client will be deleted too (this cannot be undone).',
       showCancelButton: true,
       confirmButtonColor: 'transparent',
