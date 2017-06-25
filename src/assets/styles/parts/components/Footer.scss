@@ -36,7 +36,7 @@ footer.footer {
     }
 
     li a {
-      background-color: rgba(#222,0.30);
+      background-color: rgba(#222,0.14);
       color: var(--card);
       cursor: pointer;
 
@@ -74,19 +74,21 @@ footer.footer {
 }
 
 /* DARK */
-footer.footer {
-  ul li a {
-    background-color: rgba(#000,0.25);
-    color: rgba(#fff,0.6);
-  }
+body.dark {
+  footer.footer {
+    ul li a {
+      background-color: rgba(#000,0.25);
+      color: rgba(#fff,0.6);
+    }
 
-  ul li span {
-    background-color: rgba(#000,0.15);
-    color: rgba(#fff,0.2);
-  }
+    ul li span {
+      background-color: rgba(#000,0.15);
+      color: rgba(#fff,0.2);
+    }
 
-  ul li a:hover {
-    background-color: rgba(#000,0.25);
-    color: rgba(#fff,0.6);
+    ul li a:hover {
+      background-color: rgba(#000,0.25);
+      color: rgba(#fff,0.6);
+    }
   }
 }
