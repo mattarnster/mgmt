@@ -17,9 +17,10 @@ class MgmtIndex extends PureComponent {
     return (
       <div>
         { this.props.splash ? <Splash /> : null }
-        <Header />
+
           <Router>
             <div>
+              <Header />
               <div className="main-panel">
                 <Route path="/" component={Clients} />
                 <Route path="/:clientId"  component={Projects} />

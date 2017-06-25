@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { saveSettings } from '../actions/actionCreators'
 import { register } from '../helpers/webNotifications.js'
@@ -105,12 +106,13 @@ class Header extends PureComponent {
     <header className="header">
     <div className="logo-container">
 
-    <Logo/>
+    <Link to="/"><Logo />
 
     <span className="logo-letter one">M</span>
     <span className="logo-letter two">G</span>
     <span className="logo-letter three">M</span>
     <span className="logo-letter four">T</span>
+    </Link>
     </div>
     <div className="settings-container">
     <span className="icon-cog" onClick={ this.showSettingsModal }></span>
