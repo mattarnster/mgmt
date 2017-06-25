@@ -16,11 +16,12 @@ class MgmtIndex extends PureComponent {
   render() {
     return (
       <div>
+        { this.props.splash ? <Splash /> : null }
         <Header />
           <Router>
             <div>
               <div className="main-panel">
-                { this.props.splash ? <Splash /> : <Route path="/" component={Clients} /> }
+                <Route path="/" component={Clients} />
                 <Route path="/:clientId"  component={Projects} />
                 <Route path="/:clientId/:projectId"  component={Timer} />
                 <Route path="/:clientId/:projectId/logs"  component={Logs} />

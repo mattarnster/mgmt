@@ -18,7 +18,7 @@ class Header extends PureComponent {
       document.body.classList.add("dark")
     }
     if (this.props.settings[3] === true) {
-      document.body.classList.add("dis-anim")
+      document.body.classList.add("no-anim")
     }
   }
 
@@ -71,9 +71,9 @@ class Header extends PureComponent {
       }
 
       if (result[3] === true) {
-        document.body.classList.add("dis-anim")
+        document.body.classList.add("no-anim")
       } else {
-        document.body.classList.remove("dis-anim")
+        document.body.classList.remove("no-anim")
       }
 
       if(result[1] === true) {
