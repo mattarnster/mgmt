@@ -81,6 +81,37 @@ class Projects extends PureComponent {
     })
   }
 
+  delete(projectId) {
+    var that = this;
+
+    window.swal({
+      title: 'Delete project',
+      text: 'Are you sure you want to delete this project?',
+      inputValue: this.props.projects[projectId].name,
+      showCancelButton: true,
+      confirmButtonColor: 'transparent',
+      cancelButtonColor: 'transparent',
+      showLoaderOnConfirm: false,
+      confirmButtonText: '<i class="icon icon-check-circle"></i>',
+      cancelButtonText: '<i class="icon icon-times-circle"></i>',
+      preConfirm: function (name) {
+        return new Promise(function (resolve, reject) {
+          if (name === that.props.projects[projectId].name) {
+            reject('Enter a different name or click cancel')
+          }
+          if (name === '') {
+            reject('Please enter a name')
+          } else {
+            resolve()
+          }
+        })
+      },
+      allowOutsideClick: false
+    }).then(function (name) {
+      that.props.dispatch(editProject(projectId, name))
+    })
+  }
+
   render() {
     return (
       <section className="card">
