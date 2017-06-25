@@ -13,10 +13,10 @@ export default class ListItem extends PureComponent {
   render() {
     return (
       <div className="card-list-item">
-        {this.props.sPath ? <Link to={this.props.sPath + this.props.itemKey}>{this.props.data.name}</Link> :
-        <div>{this.props.data.name}</div>}
-        {this.props.sPath ? <button className="icon-dots-three-vertical" onClick={ this.showListOps }></button> : <div>{this.props.data.time}</div>}
-        <ListItemOps edit={ (itemKey) => this.props.edit(itemKey) } delete={ (e, itemKey) => this.props.delete(itemKey) }  itemKey={ this.props.itemKey } />
+        { this.props.sPath ? <Link to={this.props.sPath + this.props.itemKey}>{this.props.data.name}</Link> :
+        <div>{this.props.data.name}</div> }
+        { this.props.sPath ? <button className="icon-dots-three-vertical" onClick={ this.showListOps }></button> : <div>{this.props.data.time}</div>}
+        { this.props.sPath ? <ListItemOps edit={ (itemKey) => this.props.edit(itemKey) } delete={ (itemKey) => this.props.delete(itemKey) }  itemKey={ this.props.itemKey } /> : null }
       </div>
     )
   }

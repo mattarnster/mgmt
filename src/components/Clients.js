@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import List from './List'
 
 import { connect } from 'react-redux'
-import { addClient, editClient } from '../actions/actionCreators'
+import { addClient, editClient, deleteClient } from '../actions/actionCreators'
 
 class Clients extends PureComponent {
 
@@ -11,6 +11,7 @@ class Clients extends PureComponent {
 
     this.addClient = this.addClient.bind(this)
     this.edit = this.edit.bind(this)
+    this.delete = this.delete.bind(this)
 
     document.title = "Clients"
   }
@@ -77,6 +78,27 @@ class Clients extends PureComponent {
     })
   }
 
+  delete(clientId) {
+    var that = this
+
+    window.swal({
+      title: 'Delete client',
+      'text': 'Are you sure?',
+      showCancelButton: true,
+      confirmButtonColor: 'transparent',
+      cancelButtonColor: 'transparent',
+      showLoaderOnConfirm: false,
+      confirmButtonText: '<i class="icon icon-check-circle"></i>',
+      cancelButtonText: '<i class="icon icon-times-circle"></i>',
+      allowOutsideClick: false
+    }).then(function () {
+      that.props.dispatch(deleteClient(clientId))
+    })
+  }
+
+
+
+
   render() {
     return (
       <section className="card">
@@ -86,7 +108,7 @@ class Clients extends PureComponent {
         </header>
         <div className="card-body">
 
-          <List data={ this.props.clients } edit={ (itemKey) => this.edit(itemKey) } sPath="/"/>
+          <List data={ this.props.clients } edit={ (itemKey) => this.edit(itemKey) } delete={ (itemKey) => this.delete(itemKey) } sPath="/"/>
 
         </div>
       </section>

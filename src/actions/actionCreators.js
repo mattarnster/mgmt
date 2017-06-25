@@ -17,6 +17,15 @@ export function editClient(clientId, name) {
   }
 }
 
+export function deleteClient(clientId) {
+  return {
+    type: "DELETE_CLIENT",
+    payload: {
+      clientId
+    }
+  }
+}
+
 export function addProject(projectName, clientId) {
   return {
     type: "ADD_PROJECT",
