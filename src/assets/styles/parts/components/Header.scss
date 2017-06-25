@@ -7,9 +7,30 @@ color: $white;
 height: 80px;
 width: 100%;
 
-span.icon-clock {
-font-size: 25px;
-}
+svg {
+     width: 25px;
+     height: 25px;
+     fill: #fff;
+     display: inline-block;
+     vertical-align: middle;
+     position: relative;
+     top: -2px;
+   }
+
+   #clock #hour,
+   #clock #min {
+     transition: ease all .5s;
+     transform-origin: center;
+   }
+
+   #clock #min {
+     transform: rotate(var(--min));
+   }
+
+   #clock #hour {
+     transform: rotate(var(--hour));
+
+   }
 
 span.icon-cog {
 font-size: 25px;
@@ -24,10 +45,11 @@ transform: rotate(90deg);
 }
 
 span.logo-letter {
+  display: inline-block;
+  vertical-align: middle;
 font-size: 25px;
 margin-left: 10px;
 position: relative;
-top: -1px;
 font-weight: 100;
 opacity: 0;
 left: 10px;
@@ -81,4 +103,28 @@ color: $white;
 cursor: pointer;
 }
 }
+}
+// settings
+div.settings-row {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+
+
+
+    input[type="number"] {
+      width: 50px;
+      border: none;
+      text-align: right;
+      font-size: 18px;
+      appearence: text;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      appearence: none;
+      display: none;
+    }
+
 }
