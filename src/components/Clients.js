@@ -20,7 +20,6 @@ class Clients extends PureComponent {
 
     window.swal({
       title: 'Add New Client',
-      text:'Name your client',
       input: 'text',
       showCancelButton: true,
       confirmButtonColor: 'transparent',
