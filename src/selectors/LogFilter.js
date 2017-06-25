@@ -16,7 +16,11 @@ const getName = (logId,duration) =>{
     case "Week":
 
       var  day = date.getDay(),
-      diff = date.getDate() - day + (day === 0 ? -6:1)
+      diff = (date.getDate() - day) + 1
+
+
+      console.log(day);
+      console.log(diff);
 
       return new Date(date.setDate(diff)).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+"  –  "+ new Date(date.setDate((diff + 6))).toLocaleDateString('en-GB',{day: 'numeric', month: 'short'})+" "+date.getFullYear()
 

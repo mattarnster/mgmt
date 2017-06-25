@@ -15,6 +15,7 @@ class Projects extends PureComponent {
     super()
 
     this.addProject = this.addProject.bind(this)
+    document.title = 'Projects';
   }
 
 

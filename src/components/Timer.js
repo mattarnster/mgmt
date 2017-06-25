@@ -54,8 +54,6 @@ class Timer extends Component {
     let ticking = this.state.ticking
     clearInterval(ticking)
 
-
-
     // fix issue with inctive tabs being throttled
     let startTime = this.state.startTime;
     let endTime = Date.now();

@@ -9,6 +9,7 @@ class Clients extends PureComponent {
   constructor() {
     super()
     this.addClient = this.addClient.bind(this)
+    document.title = "Clients"
   }
 
   addClient() {
