@@ -15,7 +15,10 @@ class Header extends PureComponent {
 
   componentDidMount() {
     if (this.props.settings[0] === true) {
-      document.body.classList.add("dark");
+      document.body.classList.add("dark")
+    }
+    if (this.props.settings[3] === true) {
+      document.body.classList.add("no-anim")
     }
   }
 
@@ -24,16 +27,20 @@ class Header extends PureComponent {
     let dm_status = this.props.settings[0]
     let al_status = this.props.settings[1]
     let alp_status = this.props.settings[2]
+    let anim_status = this.props.settings[3]
+
+    // '<div><button>Export JSON</button></div>' +
+    // '<div><span>Import JSON</span></div>' +
+    // '<div><input id="import" type="text" /></div>',
 
     window.swal({
       title: 'Settings',
       html:
       '<div><label for="dark_mode">Dark mode <input id="dark_mode" type="checkbox" ' + (dm_status === true ? 'checked' : '') + '></label></div>' +
+      '<div><label for="dis_anim">Disable gradient animations <input id="dis_anim" type="checkbox" ' + (anim_status === true ? 'checked' : '') + '></label></div>' +
       '<div><label for="alerts">Alerts <input id="alerts" type="checkbox" ' + (al_status === true ? 'checked' : '' ) + '/></label></div>' +
-      '<div><label for="alert_periods">Alert periods (mins)<input id="alert_periods" type="number" value="' + alp_status + '" /></label></div>' +
-      '<div><button>Export JSON</button></div>' +
-      '<div><span>Import JSON</span></div>' +
-      '<div><input id="import" type="text" /></div>',
+      '<div><label for="alert_periods">Alert periods (mins)<input id="alert_periods" type="number" value="' + alp_status + '" /></label></div>',
+
       showCancelButton: true,
       confirmButtonColor: 'transparent',
       cancelButtonColor: 'transparent',
@@ -51,16 +58,22 @@ class Header extends PureComponent {
             document.getElementById('dark_mode').checked,
             document.getElementById('alerts').checked,
             document.getElementById('alert_periods').value,
-            document.getElementById('import').value
+            document.getElementById('dis_anim').checked
           ])
         })
       },
     }).then(function (result) {
       //window.swal(JSON.stringify(result))
       if (result[0] === true) {
-        document.body.classList.add("dark");
+        document.body.classList.add("dark")
       } else {
-        document.body.classList.remove("dark");
+        document.body.classList.remove("dark")
+      }
+
+      if (result[3] === true) {
+        document.body.classList.add("no-anim")
+      } else {
+        document.body.classList.remove("no-anim")
       }
 
       if(result[1] === true) {

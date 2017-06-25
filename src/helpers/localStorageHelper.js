@@ -22,7 +22,7 @@ export default class localStorageHelper {
       }
       if (window.localStorage.getItem('settings') === null) {
         window.localStorage.setItem('settings', JSON.stringify([
-          true, true, '10', ''
+          false, true, '10', false
         ]))
       }
       if (window.localStorage.getItem('splash') === null) {
