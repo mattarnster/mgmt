@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 
 import { dismissSplash } from '../actions/actionCreators'
 
+import SplashLogo from '../assets/images/splash-logo.svg'
+
 class Splash extends PureComponent {
 
   constructor() {
@@ -18,18 +20,19 @@ class Splash extends PureComponent {
     setTimeout(function() {
       that.props.dispatch(dismissSplash())
       document.body.classList.remove("splash-visible")
-    }, 2000)
+    }, 2500)
   }
 
   dismissSplash() {
+    document.body.classList.remove("splash-visible")
     this.props.dispatch(dismissSplash())
   }
 
   render() {
     return (
-      <div onClick={this.dismissSplash}>
-        <h1>MGMT</h1>
-        <p>This is the splash-screen.</p>
+      <div onClick={this.dismissSplash} className="splash-container">
+        <img src={SplashLogo} alt="Splash Logo"/>
+        <h3><span>M</span><span>G</span><span>M</span><span>T</span></h3>
       </div>
     )
   }
