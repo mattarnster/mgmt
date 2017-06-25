@@ -18,8 +18,25 @@ export function editClient(clientId, name) {
 }
 
 export function deleteClient(clientId) {
+  return (dispatch) => {
+    dispatch(deleteClientInternal(clientId))
+    dispatch(deleteAllProjectsWithClient(clientId))
+  }
+}
+
+export function deleteClientInternal(clientId) {
   return {
     type: "DELETE_CLIENT",
+    payload: {
+      clientId
+    }
+  }
+}
+
+export function deleteAllProjectsWithClient(clientId) {
+  console.log('test')
+  return {
+    type: "DELETE_ALL_PROJECTS_WITH_CLIENT",
     payload: {
       clientId
     }
