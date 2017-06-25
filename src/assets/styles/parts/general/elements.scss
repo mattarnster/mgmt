@@ -23,7 +23,6 @@ body.swal2-shown {
     padding-bottom: 25px;
     margin-bottom: 25px;
     text-align: left;
-    text-align: center;
     border-bottom: 1px solid var(--border);
   }
 
@@ -41,6 +40,14 @@ body.swal2-shown {
   .swal2-cancel.swal2-styled:hover,
   .swal2-confirm.swal2-styled:hover {
     opacity: 1;
+  }
+}
+
+body.swal2-shown {
+  .sweet-warning {
+    .swal2-title {
+      text-align: center;
+    }
   }
 }
 
@@ -62,5 +69,10 @@ body.dark {
   .swal2-cancel.swal2-styled:hover:before,
   .swal2-confirm.swal2-styled:hover:before {
     opacity: .6;
+  }
+}
+@media only screen and (max-width:500px) {
+  body.swal2-shown .swal2-modal.swal2-show {
+    padding: 30px !important;
   }
 }

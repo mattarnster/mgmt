@@ -36,11 +36,12 @@ class Header extends PureComponent {
     window.swal({
       title: 'Settings',
       html:
-      '<div><label for="dark_mode">Dark mode <input id="dark_mode" type="checkbox" ' + (dm_status === true ? 'checked' : '') + '></label></div>' +
-      '<div><label for="dis_anim">Disable gradient animations <input id="dis_anim" type="checkbox" ' + (anim_status === true ? 'checked' : '') + '></label></div>' +
-      '<div><label for="alerts">Alerts <input id="alerts" type="checkbox" ' + (al_status === true ? 'checked' : '' ) + '/></label></div>' +
-      '<div><label for="alert_periods">Alert periods (mins)<input id="alert_periods" type="number" value="' + alp_status + '" /></label></div>',
-
+      '<div class="settings-row"><label for="dark_mode"><span>Dark mode</span> <input id="dark_mode" type="checkbox" ' + (dm_status === true ? 'checked' : '') + '></label></div>' +
+      '<div class="settings-row"><label for="dis_anim"><span>Background animation</span> <input id="dis_anim" type="checkbox" ' + (anim_status === true ? 'checked' : '') + '></label></div>' +
+      '<div class="settings-row"><label for="alerts"><span>Alerts</span> <input id="alerts" type="checkbox" ' + (al_status === true ? 'checked' : '' ) + '/></label></div>' +
+      '<div class="settings-row"><label for="alert_periods"><span>Alert periods <small>(mins)</small></span> <input id="alert_periods"  type="number" value="' + alp_status + '" /></label></div>',
+      width:400,
+      padding:50,
       showCancelButton: true,
       confirmButtonColor: 'transparent',
       cancelButtonColor: 'transparent',

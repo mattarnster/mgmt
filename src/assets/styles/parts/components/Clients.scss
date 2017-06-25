@@ -145,3 +145,8 @@ section.card:nth-last-child(4) {
     color: rgba(#fff,0.3);
   }
 }
+@media only screen and (max-width:500px) {
+  .card {
+    padding: 30px;
+  }
+}
