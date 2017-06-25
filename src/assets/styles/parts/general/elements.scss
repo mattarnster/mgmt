@@ -21,7 +21,6 @@ body.swal2-shown {
     font-size: 26.52px;
     color: var(--text);
     padding-bottom: 25px;
-    margin-bottom: 25px;
     border-bottom: 1px solid var(--border);
   }
 
@@ -49,7 +48,18 @@ body.swal2-shown {
     }
   }
 }
+.swal2-content {
+  font-family: 'Heebo';
+  color: var(--text);
+}
+body.dark .swal2-input {
+  background-color: transparent;
+  border-color: var(--text);
+  outline: none !important;
+  box-shadow: none !important;
 
+  color: var(--text);
+}
 /* DARK */
 body.dark {
   .swal2-container.swal2-shown {

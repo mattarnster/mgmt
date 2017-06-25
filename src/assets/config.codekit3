@@ -7,7 +7,7 @@
 		"uuidString": "EE066EB1-4054-472F-9CEF-262F8C845FBB"
 		}
 	],
-"creatorBuild": "25849",
+"creatorBuild": "25479",
 "files": {
 	"\/fonts\/icomoon.eot": {
 		"ft": 8192,
@@ -43,10 +43,7 @@
 		"oA": 0,
 		"oAP": "\/images\/poly.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
+		"opt": 0
 		},
 	"\/images\/splash-logo.gif": {
 		"ft": 4194304,
@@ -67,14 +64,14 @@
 		"prP": 0
 		},
 	"\/styles\/main.css": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/styles\/main-min.css",
 		"oF": 0,
-		"oS": 3
+		"oS": 0
 		},
 	"\/styles\/main.css.map": {
 		"ft": 8192,
@@ -90,22 +87,22 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "\/assets\/css\/main.css",
+		"oAP": "\/styles\/main.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
 	"\/styles\/parts\/components\/Clients.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/Clients.css",
+		"oAP": "\/styles\/parts\/components\/Clients.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 0,
 		"uL": 1
 		},
 	"\/styles\/parts\/components\/Footer.scss": {
@@ -116,7 +113,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/Footer.css",
+		"oAP": "\/styles\/parts\/components\/Footer.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -129,7 +126,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/Header.css",
+		"oAP": "\/styles\/parts\/components\/Header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -142,7 +139,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/Logs.css",
+		"oAP": "\/styles\/parts\/components\/Logs.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -155,7 +152,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/Projects.css",
+		"oAP": "\/styles\/parts\/components\/Projects.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -168,22 +165,22 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/Settings.css",
+		"oAP": "\/styles\/parts\/components\/Settings.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
 	"\/styles\/parts\/components\/Splash.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/Splash.css",
+		"oAP": "\/styles\/parts\/components\/Splash.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 0,
 		"uL": 1
 		},
 	"\/styles\/parts\/components\/Timer.scss": {
@@ -194,7 +191,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/Timer.css",
+		"oAP": "\/styles\/parts\/components\/Timer.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -207,35 +204,35 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/elements.css",
+		"oAP": "\/styles\/parts\/general\/elements.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
 	"\/styles\/parts\/general\/reset.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/reset.css",
+		"oAP": "\/styles\/parts\/general\/reset.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 0,
 		"uL": 1
 		},
 	"\/styles\/parts\/general\/variables.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/variables.css",
+		"oAP": "\/styles\/parts\/general\/variables.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 0,
 		"uL": 1
 		},
 	"\/styles\/parts\/reset\/reset.scss": {
@@ -246,22 +243,13 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/reset.css",
+		"oAP": "\/styles\/parts\/reset\/reset.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		}
 	},
 "hooks": [
-	{
-		"enabled": 0,
-		"name": "Hook 1",
-		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGgYJYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QHwcIDxUdJygqMTU6Oz5CRktMT1VZXWJna25vcnN3fH5VJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAGAAoAe0hALERRaTlMub2JqZWN0c6ISE4ADgBSAHdQLFhcYGRobHF8QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUeHyAhCyIjJCUmWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIgCwwpgAfSKywtLlokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNTZWxmRXhwcmVzc2lvbqMtLzBcTlNFeHByZXNzaW9uWE5TT2JqZWN00hALMjShM4AJgAzTCyA2Nzg5WU5TS2V5UGF0aIALEAqACl8QFGlucHV0QWJicmV2aWF0ZWRQYXRo0issPD1fEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uozwvMNIrLD9AXk5TTXV0YWJsZUFycmF5oz9BMFdOU0FycmF50issQ0RfEBNOU0tleVBhdGhFeHByZXNzaW9upENFLzBfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtNHIAtISUpfEA9OU0NvbnN0YW50VmFsdWWADxAAgBBVcGFydHPSKyxNTl8QGU5TQ29uc3RhbnRWYWx1ZUV4cHJlc3Npb26jTS8w1AtQUVJTSSRUWk5TTW9kaWZpZXJXTlNGbGFnc15OU09wZXJhdG9yVHlwZYASEGPSKyxWV18QFU5TSW5QcmVkaWNhdGVPcGVyYXRvcqNWWDBfEBNOU1ByZWRpY2F0ZU9wZXJhdG9y0issWltfEBVOU0NvbXBhcmlzb25QcmVkaWNhdGWjWlwwW05TUHJlZGljYXRl1AsWFxgZX2BhgBOAGYAVgBvVHh8gIQsiIyRlJoAGgAWAFoAN0hALaDShaYAXgAzTCyA2NzhtgAuAGF1pbnB1dEZpbGVuYW1l00cgC3BJSoAagBBULnBocNULUFF0UnVJJAx2Wk5TUG9zaXRpb26AHBAJ0isseHlfEBxOU1N1YnN0cmluZ1ByZWRpY2F0ZU9wZXJhdG9ypHp7WDBfEBxOU1N1YnN0cmluZ1ByZWRpY2F0ZU9wZXJhdG9yXxAZTlNTdHJpbmdQcmVkaWNhdGVPcGVyYXRvctIrLEF9okEw0issf4BfEBNOU0NvbXBvdW5kUHJlZGljYXRlo39cMF8QD05TS2V5ZWRBcmNoaXZlctGDhFRyb290gAEACAARABoAIwAtADIANwBZAF8AZgCAAJIAmQCbAJ0AnwCkAK8AsgC0ALYAuADBANUA6AD+AQABAgEEAQYBEQEbASoBPQFJAUsBTQFPAVEBUwFgAWUBZwFsAXcBgAGTAZcBpAGtAbIBtAG2AbgBvwHJAcsBzQHPAeYB6wIKAg4CEwIiAiYCLgIzAkkCTgJlAmwCfgKAAoIChAKKAo8CqwKvArgCwwLLAtoC3ALeAuMC+wL\/AxUDGgMyAzYDQgNLA00DTwNRA1MDXgNgA2IDZANmA2sDbQNvA3EDeAN6A3wDigORA5MDlQOaA6UDsAOyA7QDuQPYA90D\/AQYBB0EIAQlBDsEPwRRBFQEWQAAAAAAAAIBAAAAAAAAAIUAAAAAAAAAAAAAAAAAAARb",
-		"runOrder": 0,
-		"scriptSourceString": "name=$(basename \"$CK_INPUT_PATH\" \".php\")\ndirectory_path=${CK_INPUT_PATH#\"$CK_PROJECT_ROOT\"}\ndirectory_path=$(dirname \"${directory_path}\")\n\nfile=$CK_PROJECT_ROOT\"\/assets\/scss\"$directory_path\"\/\"$name\".scss\"\ndefault_style=$CK_PROJECT_ROOT\"\/assets\/scss\/parts\/parts.scss\"\n\n\nif [ -f \"$file\" ]\nthen\n\techo \"$file found lets not touch that\"\nelse\n\techo \"$file not found. creating file\"\n\tmkdir -p $CK_PROJECT_ROOT\"\/assets\/scss\"$directory_path\"\/\"\n\techo \"\" > \"$file\"\n\techo \"@import '..$directory_path\/$name';\" >> \"$default_style\"\nfi",
-		"scriptType": 1,
-		"uuidString": "F3ABA946-786C-42C8-82E7-C146E00D6E07"
-		}
 	],
 "manualImportLinks": {
 	},
@@ -667,7 +655,7 @@
 		},
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
-	"esLintEnvironmentsMask": 8193,
+	"esLintEnvironmentsMask": 1,
 	"esLintRules": {
 		"accessor-pairs": {
 			"active": 0,
@@ -917,10 +905,6 @@
 			"active": 0,
 			"optionString": ""
 			},
-		"no-await-in-loop": {
-			"active": 0,
-			"optionString": ""
-			},
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
@@ -939,10 +923,6 @@
 			},
 		"no-class-assign": {
 			"active": 1,
-			"optionString": ""
-			},
-		"no-compare-neg-zero": {
-			"active": 0,
 			"optionString": ""
 			},
 		"no-cond-assign": {
@@ -1050,8 +1030,8 @@
 			"optionString": ""
 			},
 		"no-extra-parens": {
-			"active": 0,
-			"optionString": "'all', {'conditionalAssign': false, 'returnAssign': false, 'nestedBinaryExpressions': false, 'ignoreJSX': 'none'}"
+			"active": 1,
+			"optionString": "'all', {'conditionalAssign': false, 'returnAssign': false, 'nestedBinaryExpressions': false}"
 			},
 		"no-extra-semi": {
 			"active": 1,
@@ -1070,7 +1050,7 @@
 			"optionString": ""
 			},
 		"no-global-assign": {
-			"active": 1,
+			"active": 0,
 			"optionString": "{'exceptions': []}"
 			},
 		"no-implicit-coercion": {
@@ -1142,10 +1122,6 @@
 			"optionString": "{'grouping': false, 'allowCall': false }"
 			},
 		"no-mixed-spaces-and-tabs": {
-			"active": 0,
-			"optionString": ""
-			},
-		"no-multi-assign": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -1274,7 +1250,7 @@
 			"optionString": "{'props': false}"
 			},
 		"no-self-compare": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-sequences": {
@@ -1302,7 +1278,7 @@
 			"optionString": ""
 			},
 		"no-template-curly-in-string": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-ternary": {
@@ -1358,12 +1334,12 @@
 			"optionString": ""
 			},
 		"no-unsafe-negation": {
-			"active": 1,
+			"active": 0,
 			"optionString": ""
 			},
 		"no-unused-expressions": {
 			"active": 0,
-			"optionString": "{'allowShortCircuit': false, 'allowTernary': false, 'allowTaggedTemplates': false}"
+			"optionString": "{'allowShortCircuit': false, 'allowTernary': false}"
 			},
 		"no-unused-labels": {
 			"active": 1,
@@ -1371,18 +1347,18 @@
 			},
 		"no-unused-vars": {
 			"active": 1,
-			"optionString": "{'vars': 'all', 'args': 'after-used', 'caughtErrors': 'none', 'ignoreRestSiblings': false}"
+			"optionString": "{'vars': 'all', 'args': 'after-used', 'caughtErrors': 'none'}"
 			},
 		"no-use-before-define": {
 			"active": 0,
-			"optionString": "{'functions': true, 'classes': true, 'variables': true}"
+			"optionString": "{'functions': true, 'classes': true}"
 			},
 		"no-useless-call": {
 			"active": 0,
 			"optionString": ""
 			},
 		"no-useless-computed-key": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-useless-concat": {
@@ -1424,10 +1400,6 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
-			},
-		"nonblock-statement-body-position": {
-			"active": 0,
-			"optionString": "'beside'"
 			},
 		"object-curly-newline": {
 			"active": 0,
@@ -1473,17 +1445,9 @@
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
 			},
-		"prefer-destructuring": {
-			"active": 0,
-			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
-			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
-			},
-		"prefer-promise-reject-errors": {
-			"active": 0,
-			"optionString": "{'allowEmptyReject': false}"
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -1518,7 +1482,7 @@
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false, 'ArrowFunctionExpression': false}}"
 			},
 		"require-yield": {
-			"active": 1,
+			"active": 0,
 			"optionString": ""
 			},
 		"rest-spread-spacing": {
@@ -1581,10 +1545,6 @@
 			"active": 0,
 			"optionString": "'never'"
 			},
-		"template-tag-spacing": {
-			"active": 0,
-			"optionString": "'never'"
-			},
 		"unicode-bom": {
 			"active": 0,
 			"optionString": "'never'"
@@ -1626,7 +1586,7 @@
 	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
-	"jsCheckerReservedNamesString": "google,wpt_global_js,console",
+	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
@@ -1988,7 +1948,7 @@
 		"syntaxCheckerStyle": 1
 		},
 	"languageDefaultsCSS": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 2,
 		"autoOutputPathFilenamePattern": "*-min.css",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -1996,7 +1956,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"outputStyle": 3,
-		"shouldRunAutoprefixer": 1,
+		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0
 		},
 	"languageDefaultsGIF": {
@@ -2028,8 +1988,7 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0,
-		"quality": 100
+		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -2038,7 +1997,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
 		"transpilerStyle": 0
@@ -2052,6 +2011,14 @@
 		"autoOutputPathStyle": 0,
 		"orderOutput": 0,
 		"outputStyle": 1
+		},
+	"languageDefaultsJSX": {
+		"autoOutputAction": 0,
+		"autoOutputPathFilenamePattern": "*.js",
+		"autoOutputPathRelativePath": "",
+		"autoOutputPathReplace1": "jsx",
+		"autoOutputPathReplace2": "js",
+		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
@@ -2114,9 +2081,7 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0,
-		"optimizerType": 1,
-		"quality": 100
+		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
@@ -2131,15 +2096,15 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "assets\/css",
+		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 1,
-		"createSourceMap": 1,
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
-		"outputStyle": 3,
-		"shouldRunAutoprefixer": 1,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
@@ -2172,7 +2137,7 @@
 		"shouldRunBless": 0
 		},
 	"languageDefaultsSVG": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 2,
 		"autoOutputPathFilenamePattern": "*.svg",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -2200,17 +2165,7 @@
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
-		{
-			"autoOutputAction": 0,
-			"autoOutputPathFilenamePattern": "*.php",
-			"autoOutputPathRelativePath": "",
-			"autoOutputPathReplace1": "",
-			"autoOutputPathReplace2": "",
-			"autoOutputPathStyle": 0,
-			"fileExtension": "php"
-			}
 		],
-	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",

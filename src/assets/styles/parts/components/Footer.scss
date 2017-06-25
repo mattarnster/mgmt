@@ -77,8 +77,9 @@ footer.footer {
 body.dark {
   footer.footer {
     ul li a {
-      background-color: rgba(#000,0.25);
+      background-color: rgba(#000,0.15);
       color: rgba(#fff,0.6);
+      transition: 0.3s all ease;
     }
 
     ul li span {

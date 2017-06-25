@@ -17,6 +17,27 @@
   padding: 50px;
 }
 
+@media only screen and (max-height: 700px) {
+  .main-panel {
+    //height: calc(100vh - 810px);
+    min-height: 0;
+  }
+
+  .card {
+    height: 100%;
+  }
+}
+@media only screen and (max-height: 430px) {
+  .main-panel {
+    //height: calc(100vh - 810px);
+    min-height: 270px;
+  }
+
+  .card {
+    height: 100%;
+  }
+}
+
 .card header {
   font-size: 26.52px;
   font-weight: 100;
