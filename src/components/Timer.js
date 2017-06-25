@@ -72,7 +72,7 @@ class Timer extends Component {
 
 
     this.props.dispatch(addTimeToProject(this.props.match.params.projectId, finalTime))
-    this.props.dispatch(processLog(finalTime, this.props.match.params.projectId))
+    this.props.dispatch(processLog(runTime, this.props.match.params.projectId))
 
 
   }
