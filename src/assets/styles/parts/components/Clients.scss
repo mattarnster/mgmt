@@ -100,7 +100,7 @@ section.card:nth-last-child(2) {
   transform: translateX(-60%) scale(0.9);
   transition: .3s all ease;
   opacity: .8;
-  mask-image: linear-gradient(to right, rgba(255,255,255,0.1) 10%,rgba(255,255,255,1) 100%);
+  mask: linear-gradient(to right, rgba(255,255,255,0.1) 10%,rgba(255,255,255,1) 100%);
 
   * {
     pointer-events: none;
@@ -110,6 +110,7 @@ section.card:nth-last-child(2) {
 section.card:nth-last-child(2):hover {
   transform: translateX(-60%) scale(0.91);
   opacity: 1;
+  mask: linear-gradient(to right, rgba(255,255,255,1) 10%,rgba(255,255,255,1) 100%);
 }
 
 section.card:nth-last-child(3) {

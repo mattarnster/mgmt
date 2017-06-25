@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import { saveSettings } from '../actions/actionCreators'
 import { register } from '../helpers/webNotifications.js'
+import  Logo  from './Logo.js'
 
 class Header extends PureComponent {
 
@@ -73,8 +74,10 @@ class Header extends PureComponent {
   render() {
     return (
       <header className="header">
-      <div className="logo-container">
-          <span className="icon-clock"></span>
+        <div className="logo-container">
+
+          <Logo/>
+
           <span className="logo-letter one">M</span>
           <span className="logo-letter two">G</span>
           <span className="logo-letter three">M</span>

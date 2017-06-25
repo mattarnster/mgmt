@@ -11,8 +11,27 @@ header.header {
     font-size: 25px;
   }
 
-  span.icon-cog {
-    font-size: 25px;
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #clock #hour,
+  #clock #min {
+    transition: ease all .5s;
+    transform-origin: center;
+  }
+
+  #clock #min {
+    transform: rotate(var(--min));
+  }
+
+  #clock #hour {
+    transform: rotate(var(--hour));
+
   }
 
   .settings-container {
@@ -27,12 +46,13 @@ header.header {
     font-size: 25px;
     margin-left: 10px;
     position: relative;
-    top: -1px;
     font-weight: 100;
     opacity: 0;
     left: 10px;
     transition: .3s all ease;
     pointer-events: none;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   span.logo-letter.one {
