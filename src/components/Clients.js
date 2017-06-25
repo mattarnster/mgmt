@@ -101,7 +101,6 @@ class Clients extends PureComponent {
 
 
   render() {
-    console.log(this.props.clients)
     return (
       <section className="card">
         <header>
