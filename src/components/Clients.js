@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import List from './List'
+import NoData from './NoData'
 
 import { connect } from 'react-redux'
 import { addClient, editClient, deleteClient } from '../actions/actionCreators'
@@ -108,7 +109,7 @@ class Clients extends PureComponent {
         </header>
         <div className="card-body">
 
-          <List data={ this.props.clients } edit={ (itemKey) => this.edit(itemKey) } delete={ (itemKey) => this.delete(itemKey) } sPath="/"/>
+          {this.props.clients.length > 0 ? <List data={ this.props.clients } edit={ (itemKey) => this.edit(itemKey) } delete={ (itemKey) => this.delete(itemKey) } sPath="/"/> : <NoData displayText="You don't seem to have any clients. Why not add one?" add={ this.addClient } /> }
 
         </div>
       </section>
