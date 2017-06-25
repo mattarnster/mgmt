@@ -2,14 +2,14 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 
 import { saveSettings } from '../actions/actionCreators'
-import { register } from '../helpers/webNotifications.js'
+import { showAlertConfirm } from '../helpers/webNotifications.js'
 import  Logo  from './Logo.js'
+
 
 class Header extends PureComponent {
 
 constructor() {
 super()
-
 this.showSettingsModal = this.showSettingsModal.bind(this)
 }
 
@@ -78,7 +78,7 @@ document.body.classList.remove("no-anim")
 }
 
 if(result[1] === true) {
-register();
+showAlertConfirm();
 }
 
 that.props.dispatch(saveSettings(result))

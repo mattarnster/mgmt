@@ -48,6 +48,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/styles\/main.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/styles\/main-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/styles\/main.css.map": {
 		"ft": 8192,
 		"oA": 2,
@@ -89,6 +99,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/styles\/parts\/components\/Footer.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/styles\/parts\/components\/Header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/styles\/parts\/components\/Header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
