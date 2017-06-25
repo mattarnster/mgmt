@@ -34,7 +34,6 @@ export function deleteClientInternal(clientId) {
 }
 
 export function deleteAllProjectsWithClient(clientId) {
-  console.log('test')
   return {
     type: "DELETE_ALL_PROJECTS_WITH_CLIENT",
     payload: {
@@ -64,6 +63,13 @@ export function editProject(projectId, name) {
 }
 
 export function deleteProject(projectId) {
+  return (dispatch) => {
+   dispatch(deleteLogsWithProject(projectId))
+   dispatch(deleteProjectInternal(projectId))
+  }
+}
+
+export function deleteProjectInternal(projectId) {
   return {
     type: "DELETE_PROJECT",
     payload: {
@@ -98,6 +104,15 @@ export function processLog(runTime, projectId) {
     dispatch(processLogInternal('Month', runTime, projectId))
     dispatch(processLogInternal('Week', runTime, projectId))
     dispatch(processLogInternal('Day', runTime, projectId))
+  }
+}
+
+export function deleteLogsWithProject(projectId) {
+  return {
+    type: "DELETE_LOGS_WITH_PROJECT",
+    payload: {
+      projectId
+    }
   }
 }
 

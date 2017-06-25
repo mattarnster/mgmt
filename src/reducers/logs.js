@@ -39,8 +39,16 @@ const logs = (state = {}, action) => {
 
       ls.putLogs(newState)
 
-
       return newState
+
+      case "DELETE_LOGS_WITH_PROJECT":
+
+        var newLogsWithoutProject = Object.assign({}, ...Object.keys(state).map(k => (
+          (state[k].projectId === action.payload.projectId ? null : {[k]: state[k]}))
+        ));
+        ls.putLogs(newLogsWithoutProject)
+
+        return newLogsWithoutProject
 
 
     default:

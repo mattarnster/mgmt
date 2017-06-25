@@ -52,13 +52,33 @@ const projects = (state = {}, action) => {
       return newProjectsState
 
     case 'DELETE_ALL_PROJECTS_WITH_CLIENT':
+
+      var projectsToDie = Object.keys(state).filter( k => {
+        return (state[k].clientId !== action.payload.clientId ? false : true)
+      })
+
       let newProjectsWithoutClientState = Object.assign({}, ...Object.keys(state).map(k => (
         (state[k].clientId === action.payload.clientId ? null : {[k]: state[k]}))
       ));
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Deletion stuffs
       ls = new localStorageHelper()
       ls.putProjects(newProjectsWithoutClientState)
+
+      // Delete all logs associated with project
+      var logs = ls.getLogs()
+      console.log(projectsToDie);
+      console.log(logs)
+
+      let newLogs = Object.assign({}, ...Object.keys(logs).map(k => (
+        (projectsToDie.includes(logs[k].projectId) ? null : {[k]: logs[k]}))
+      ));
+
+      console.log(newLogs)
+      ls.putLogs(newLogs)
 
       return newProjectsWithoutClientState
 
