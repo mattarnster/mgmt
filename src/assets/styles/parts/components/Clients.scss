@@ -100,6 +100,7 @@ section.card:nth-last-child(2) {
   transform: translateX(-60%) scale(0.9);
   transition: .3s all ease;
   opacity: .8;
+  mask-image: linear-gradient(to right, rgba(255,255,255,0.1) 10%,rgba(255,255,255,1) 100%);
 
   * {
     pointer-events: none;

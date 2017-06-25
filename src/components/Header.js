@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 
 import { saveSettings } from '../actions/actionCreators'
+import { register } from '../helpers/webNotifications.js'
 
 class Header extends PureComponent {
 
@@ -28,7 +29,7 @@ class Header extends PureComponent {
       html:
       '<div><label for="dark_mode">Dark mode <input id="dark_mode" type="checkbox" ' + (dm_status === true ? 'checked' : '') + '></label></div>' +
       '<div><label for="alerts">Alerts <input id="alerts" type="checkbox" ' + (al_status === true ? 'checked' : '' ) + '/></label></div>' +
-      '<div><label for="alert_periods">Alert periods (mins)<input id="alert_periods" type="text" value="' + alp_status + '" /></label></div>' +
+      '<div><label for="alert_periods">Alert periods (mins)<input id="alert_periods" type="number" value="' + alp_status + '" /></label></div>' +
       '<div><button>Export JSON</button></div>' +
       '<div><span>Import JSON</span></div>' +
       '<div><input id="import" type="text" /></div>',
@@ -42,7 +43,7 @@ class Header extends PureComponent {
       preConfirm: function () {
         return new Promise(function (resolve, reject) {
           // Do validation here
-          if (document.getElementById('alerts').value === 'on' && document.getElementById('alert_periods').value === '') {
+          if (document.getElementById('alerts').value === 'on' && (document.getElementById('alert_periods').value === '' || isNaN(document.getElementById('alert_periods').value))) {
             reject("You need to specify an alert period.")
           }
           resolve([
@@ -59,6 +60,10 @@ class Header extends PureComponent {
         document.body.classList.add("dark");
       } else {
         document.body.classList.remove("dark");
+      }
+
+      if(result[1] === true) {
+        register();
       }
 
       that.props.dispatch(saveSettings(result))
