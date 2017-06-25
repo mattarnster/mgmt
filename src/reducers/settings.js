@@ -7,10 +7,11 @@ const settings = (state = [], action) => {
 
     case "SAVE_SETTINGS":
       ls.putSettings(action.payload.settings)
-      return action.payload.settings
+      state = action.payload.settings
+      return state
 
     default:
-      return action.payload.settings
+      return state
   }
 }
 
