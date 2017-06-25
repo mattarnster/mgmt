@@ -24,7 +24,7 @@ class Logo extends Component {
 
     setTimeout(function(){
       that.setLogoTime();
-    },1000)
+    },100)
 
 
   }
