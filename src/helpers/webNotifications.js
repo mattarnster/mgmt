@@ -17,10 +17,12 @@ export function showAlertConfirm() {
 
     if (result === 'granted') {
 
+      var notes = ['Go make yourself a drink!', 'Good job, go stretch your legs!', 'Time for some food!', 'Give your eyes a rest! Go look out of a window.']
+
       navigator.serviceWorker.ready.then(function(registration) {
-        registration.showNotification('You\'re all set', {
-          body: 'We\'ll let you know what it\'s time for break',
-          icon: '/512.png',
+        registration.showNotification(notes[Math.floor(Math.random() * 4)], {
+          body: 'Don\'t forget to pause the timer',
+          icon: '/MGMT-Break.png',
           vibrate: [200],
         });
       });

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { saveSettings } from '../actions/actionCreators'
-import { register } from '../helpers/webNotifications.js'
+import { register, showAlertConfirm } from '../helpers/webNotifications.js'
 import  Logo  from './Logo.js'
 
 
@@ -95,7 +95,8 @@ class Header extends PureComponent {
       }
 
       if(result[1] === true && al_status !== result[1]) {
-        register();
+        register()
+        showAlertConfirm()
       }
 
       that.props.dispatch(saveSettings(result))
