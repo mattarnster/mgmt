@@ -16,7 +16,8 @@ const defaultState = {
     clients: localStorage.getClients(),
     logs: localStorage.getLogs(),
     logFilterDuration: 'Day',
-    settings: localStorage.getSettings()
+    settings: localStorage.getSettings(),
+    splash: true
 }
 
 const store = createStore(

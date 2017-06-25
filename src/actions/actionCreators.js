@@ -65,3 +65,8 @@ export function saveSettings(settings) {
   }
 }
 
+export function dismissSplash() {
+  return {
+    type: "DISMISS_SPLASH"
+  }
+}

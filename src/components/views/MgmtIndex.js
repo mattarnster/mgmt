@@ -1,4 +1,7 @@
 import React, { PureComponent } from 'react'
+
+import { connect } from 'react-redux'
+
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Clients from '../Clients'
@@ -7,8 +10,9 @@ import Header from '../Header'
 import Logs from '../Logs'
 import Projects from '../Projects'
 import Timer from '../Timer'
+import Splash from '../Splash'
 
-export default class MgmtIndex extends PureComponent {
+class MgmtIndex extends PureComponent {
   render() {
     return (
       <div>
@@ -16,7 +20,7 @@ export default class MgmtIndex extends PureComponent {
           <Router>
             <div>
               <div className="main-panel">
-                <Route path="/" component={Clients} />
+                { this.props.splash ? <Splash /> : <Route path="/" component={Clients} /> }
                 <Route path="/:clientId"  component={Projects} />
                 <Route path="/:clientId/:projectId"  component={Timer} />
                 <Route path="/:clientId/:projectId/logs"  component={Logs} />
@@ -28,3 +32,11 @@ export default class MgmtIndex extends PureComponent {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    splash: state.splash
+  }
+}
+
+export default connect(mapStateToProps)(MgmtIndex)

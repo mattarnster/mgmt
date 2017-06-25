@@ -25,6 +25,9 @@ export default class localStorageHelper {
           true, true, '10', ''
         ]))
       }
+      if (window.localStorage.getItem('splash') === null) {
+        window.localStorage.setItem('splash', true)
+      }
     }
 
 

@@ -5,13 +5,15 @@ import clients from './clients'
 import logs from './logs'
 import settings from './settings'
 import logFilterDuration from './logFilterDuration'
+import splash from './splash'
 
 const rootReducer = combineReducers({
   projects,
   clients,
   logs,
   settings,
-  logFilterDuration
+  logFilterDuration,
+  splash
 })
 
 export default rootReducer
