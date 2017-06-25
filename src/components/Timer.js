@@ -5,6 +5,7 @@ import { ProjectFilter } from '../selectors/ProjectFilter'
 import { Link } from 'react-router-dom'
 
 import { addTimeToProject, processLog } from '../actions/actionCreators'
+import { showReminderNotification } from '../helpers/webNotifications.js'
 
 
 
@@ -26,6 +27,7 @@ class Timer extends Component {
   }
 
   componentDidMount() {
+
 
     this.unblock = this.props.history.block((nextLocation)=>{
 
@@ -69,7 +71,6 @@ class Timer extends Component {
   }
 
 
-
   getTimer(){
     let time = new Date(this.state.roughTime * 1000).toISOString().substr(11, 8)
     document.title = time
@@ -78,6 +79,9 @@ class Timer extends Component {
 
   play(){
     let that = this;
+
+    let startTime = Date.now()
+
     let ticking = setInterval(function(){
 
       let time = that.state.roughTime
@@ -86,6 +90,19 @@ class Timer extends Component {
         roughTime:time
       })
       that.props.dispatch(addTimeToProject(that.props.match.params.projectId, that.state.roughTime))
+
+
+      if(that.props.settings[2] && that.props.settings[1]) {
+
+          let runTime = Math.round((Date.now() - startTime) / 1000) / 60
+
+          if(runTime % that.props.settings[2] === 0) {
+            showReminderNotification();
+          }
+
+      }
+
+
 
     },1000);
 
@@ -140,7 +157,8 @@ class Timer extends Component {
 
 const mapStateToProps = (state,props) => {
   return {
-    projects: ProjectFilter(state.projects,props.match.params.projectId,'key')
+    projects: ProjectFilter(state.projects,props.match.params.projectId,'key'),
+    settings: state.settings
   }
 }
 

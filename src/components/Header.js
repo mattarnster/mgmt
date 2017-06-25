@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 
 import { saveSettings } from '../actions/actionCreators'
-import { showAlertConfirm } from '../helpers/webNotifications.js'
+import { register,showAlertConfirm } from '../helpers/webNotifications.js'
 import  Logo  from './Logo.js'
 
 
@@ -19,6 +19,9 @@ class Header extends PureComponent {
     }
     if (this.props.settings[3] === true) {
       document.body.classList.add("no-anim")
+    }
+    if(this.props.settings[1]){
+      register();
     }
   }
 
@@ -38,8 +41,8 @@ class Header extends PureComponent {
       html:
       '<div class="settings-row"><p><span>Dark mode</span></p> <input id="dark_mode" class="styled-checkbox" type="checkbox" ' + (dm_status === true ? 'checked' : '') + '><label for="dark_mode"></label></div>' +
       '<div class="settings-row"><p><span>Disable Background animation</span></p> <input id="dis_anim" class="styled-checkbox" type="checkbox" ' + (anim_status === true ? 'checked' : '') + '><label for="dis_anim"></label></div>' +
-      '<div class="settings-row"><p><span>Alerts</span> </p><input id="alerts" class="styled-checkbox" type="checkbox" ' + (al_status === true ? 'checked' : '' ) + '/><label for="alerts"></label></div>' +
-      '<div class="settings-row"><p><span>Alert periods <small>(mins)</small></span></p> <input id="alert_periods"  type="number" value="' + alp_status + '" /></div>',
+      '<div class="settings-row"><p><span>Alerts</span> </p><input id="alerts" class="styled-checkbox"  type="checkbox" ' + (al_status === true ? 'checked' : '' ) + '/><label for="alerts"></label></div>' +
+      '<div class="settings-row"><p><span>Alert periods <small>(mins)</small></span></p> <input id="alert_periods" min="1" step="1"   type="number" value="' + alp_status + '" /></div>',
       width:400,
       padding:50,
       showCancelButton: true,
@@ -52,13 +55,13 @@ class Header extends PureComponent {
       preConfirm: function () {
         return new Promise(function (resolve, reject) {
           // Do validation here
-          if (document.getElementById('alerts').value === 'on' && (document.getElementById('alert_periods').value === '' || isNaN(document.getElementById('alert_periods').value))) {
+          if (document.getElementById('alerts').checked && (document.getElementById('alert_periods').value === '' || isNaN(document.getElementById('alert_periods').value))) {
             reject("You need to specify an alert period.")
           }
           resolve([
           document.getElementById('dark_mode').checked,
           document.getElementById('alerts').checked,
-          document.getElementById('alert_periods').value,
+          Math.round(document.getElementById('alert_periods').value),
           document.getElementById('dis_anim').checked
           ])
         })
@@ -77,7 +80,8 @@ class Header extends PureComponent {
         document.body.classList.remove("no-anim")
       }
 
-      if(result[1] === true) {
+      if(result[1] === true && al_status !== result[1]) {
+        register();
         showAlertConfirm();
       }
 
