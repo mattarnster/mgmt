@@ -26,7 +26,6 @@ class Projects extends PureComponent {
 
     window.swal({
       title: 'Add New Project',
-      text:'Name the project',
       input: 'text',
       showCancelButton: true,
       confirmButtonColor: 'transparent',

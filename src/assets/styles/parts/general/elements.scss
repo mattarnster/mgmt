@@ -22,7 +22,7 @@ body.swal2-shown {
     color: var(--text);
     padding-bottom: 25px;
     margin-bottom: 25px;
-    text-align: left;
+    text-align: left !important;
     border-bottom: 1px solid var(--border);
   }
 
