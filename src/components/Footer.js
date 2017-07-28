@@ -22,10 +22,6 @@ export default class Footer extends PureComponent {
             {params[1] && params[2] ? <Link to={"/"+params[1]+"/"+params[2]+"/logs" }><i className="icon-clipboard"></i>Logs</Link> : <span><i className="icon-clipboard"></i>Logs</span>}
           </li>
         </ul>
-        <a href="https://www.reactriot.com/entries/227-moonunit/vote" className="vote-container">
-          <p>Vote for us in</p>
-          <img src={ReactRiotLogo} alt="ReactRiot"/>
-        </a>
       </footer>
     )
   }
