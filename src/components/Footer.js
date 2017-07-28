@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
-import ReactRiotLogo from '../assets/images/reactriot.png'
 
 export default class Footer extends PureComponent {
   render() {
